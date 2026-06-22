@@ -113,7 +113,7 @@ const FoundationsSection = () => {
             return (
               <div
                 key={item.title}
-                className={`${fadeUp} relative h-[220px] overflow-hidden rounded-[18px] ${item.bg} shadow-[0_14px_35px_rgba(8,43,53,0.14)]`}
+                className={`${fadeUp} relative h-[280px] sm:h-[300px] lg:h-[320px] overflow-hidden rounded-[18px] ${item.bg} shadow-[0_14px_35px_rgba(8,43,53,0.14)]`}
                 style={{
                   animationDelay: `${0.35 + index * 0.25}s`,
                 }}
@@ -121,7 +121,12 @@ const FoundationsSection = () => {
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="absolute bottom-0 right-0 z-10 h-[190px] w-[160px] object-cover object-center"
+                  className={`absolute bottom-0 right-0 z-10 object-cover ${index === 1
+                    ? "h-[190px] w-[140px] sm:h-[210px] sm:w-[160px] lg:h-[230px] lg:w-[175px] object-center"
+                    : index === 2
+                      ? "h-[240px] w-[180px] sm:h-[260px] sm:w-[200px] lg:h-[280px] lg:w-[230px] object-[35%_center]"
+                      : "h-[240px] w-[140px] sm:h-[260px] sm:w-[160px] lg:h-[280px] lg:w-[180px] object-center"
+                    }`}
                 />
 
                 <div className="absolute inset-0 z-20 bg-gradient-to-r from-black/25 via-black/5 to-transparent" />
