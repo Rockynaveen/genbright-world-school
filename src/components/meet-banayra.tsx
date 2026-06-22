@@ -155,7 +155,7 @@ export default function BanayaraSection() {
         </div>
 
         {/* Bottom Card */}
-        <div className="relative z-30 px-4 pb-8 sm:px-6 md:px-10 lg:-mt-20 lg:pb-12">
+        <div className="relative z-30 px-4 pb-16 sm:px-6 md:px-10 lg:-mt-20 lg:pb-24">
           <div
             data-aos="fade-up"
             data-aos-delay="350"
