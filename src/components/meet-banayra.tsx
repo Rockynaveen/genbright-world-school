@@ -69,7 +69,7 @@ export default function BanayaraSection() {
   }, []);
 
   return (
-    <section className="relative z-10 overflow-hidden bg-white py-14 md:py-20 font-sans">
+    <section className="relative z-10 overflow-hidden bg-white pt-14 pb-14 md:pt-20 md:pb-28 lg:pb-36 font-sans">
       <div className="w-full overflow-hidden bg-white">
         <div className="grid items-stretch lg:grid-cols-[42%_58%] bg-white">
           {/* Left Content */}
@@ -155,7 +155,7 @@ export default function BanayaraSection() {
         </div>
 
         {/* Bottom Card */}
-        <div className="relative z-30 px-4 pb-16 sm:px-6 md:px-10 lg:-mt-20 lg:pb-24">
+        <div className="relative z-30 px-4 pb-0 sm:px-6 md:px-10 lg:-mt-20">
           <div
             data-aos="fade-up"
             data-aos-delay="350"
