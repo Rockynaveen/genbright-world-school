@@ -31,7 +31,7 @@ export default function CampusSection() {
   return (
     <section className="bg-white py-14 md:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid overflow-hidden rounded-[28px] bg-[#FAF8F1] lg:grid-cols-[50%_50%]">
+        <div className="grid overflow-hidden rounded-[28px] bg-white lg:grid-cols-[50%_50%]">
           {/* Left Image Carousel */}
           <div className="relative min-h-[320px] overflow-hidden lg:min-h-[520px]">
             <div

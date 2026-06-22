@@ -38,7 +38,7 @@ export default function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative h-[600px] overflow-visible bg-[#F8FAF4] sm:h-[650px] lg:h-[680px]"
+      className="relative h-[600px] overflow-visible bg-white sm:h-[650px] lg:h-[680px]"
     >
       <style>{`
         @keyframes heroFadeUp {

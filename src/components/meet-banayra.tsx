@@ -7,8 +7,8 @@ import {
   Leaf,
   Search,
   Sprout,
-  Sunrise,
   TreePine,
+  Sunrise,
 } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -69,9 +69,9 @@ export default function BanayaraSection() {
   }, []);
 
   return (
-    <section className="relative z-10 overflow-hidden bg-white py-14 md:py-20 font-['Inter']">
+    <section className="relative z-10 overflow-hidden bg-white py-14 md:py-20 font-sans">
       <div className="w-full overflow-hidden bg-white">
-        <div className="grid items-stretch lg:grid-cols-[42%_58%]">
+        <div className="grid items-stretch lg:grid-cols-[42%_58%] bg-white">
           {/* Left Content */}
           <div className="relative z-20 flex flex-col justify-center bg-white px-6 py-10 sm:px-10 md:px-14 lg:px-20 lg:py-16 xl:px-24">
             <div data-aos="fade-up" data-aos-delay="100">
@@ -81,7 +81,7 @@ export default function BanayaraSection() {
                 <Leaf size={18} className="text-fresh-green" />
               </p>
 
-              <h2 className="font-['DM_Serif_Display'] text-[58px] leading-[0.9] tracking-[-0.03em] text-dark-navy sm:text-[76px] md:text-[90px] lg:text-[82px] xl:text-[92px]">
+              <h2 className="font-heading text-[58px] leading-[0.9] tracking-[-0.03em] text-dark-navy sm:text-[76px] md:text-[90px] lg:text-[82px] xl:text-[92px]">
                 Banayara
               </h2>
 
@@ -133,7 +133,7 @@ export default function BanayaraSection() {
             <p
               data-aos="fade-up"
               data-aos-delay="760"
-              className="mt-8 max-w-[390px] text-[14px] font-medium leading-7 text-dark-navy/80 sm:text-[15px]"
+              className="mt-8 max-w-[390px] text-[14px] pb-5 font-medium leading-7 text-dark-navy/80 sm:text-[15px]"
             >
               Banayara journeys alongside every GenBright child, reminding them
               to stay grounded, stay curious, and keep growing.
@@ -159,7 +159,7 @@ export default function BanayaraSection() {
           <div
             data-aos="fade-up"
             data-aos-delay="350"
-            className="mx-auto grid w-full gap-5 rounded-[26px] bg-white px-5 py-6 shadow-[0_20px_55px_rgba(8,43,53,0.1)] sm:grid-cols-2 sm:px-7 lg:grid-cols-4 lg:gap-0 lg:px-8"
+            className="mx-auto grid w-full gap-5 rounded-[26px] bg-white px-5 py-6 shadow-[0_20px_55px_rgba(8,43,53,0.1)] sm:grid-cols-2 sm:px-7 lg:grid-cols-4 lg:gap-0 lg:px-8 border border-deep-teal/5"
           >
             {bottomValues.map((item, index) => {
               const Icon = item.icon;

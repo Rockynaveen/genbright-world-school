@@ -14,7 +14,7 @@ export default function FamiliesSection() {
   return (
     <section className="w-full bg-white py-14 md:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid overflow-hidden rounded-[28px] bg-[#FAF8F1] lg:grid-cols-[50%_50%]">
+        <div className="grid overflow-hidden rounded-[28px] bg-white lg:grid-cols-[50%_50%]">
           {/* Content */}
           <div className="flex min-h-[420px] items-center px-6 py-12 sm:px-10 lg:min-h-[520px] lg:px-14">
             <div className="max-w-xl">

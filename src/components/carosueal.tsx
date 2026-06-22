@@ -60,7 +60,7 @@ const FamilyCampusCarousel = () => {
   return (
     <section className="w-full bg-white py-14 md:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-[28px] bg-[#FAF8F1]">
+        <div className="relative overflow-hidden rounded-[28px] bg-white">
           <div
             className="flex transition-transform duration-700 ease-in-out"
             style={{ transform: `translateX(-${activeSlide * 100}%)` }}
