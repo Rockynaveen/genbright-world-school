@@ -133,27 +133,6 @@ export default function HeroSection() {
         className={`${fadeUp} absolute bottom-16 right-10 hidden items-center gap-5 lg:flex`}
         style={{ animationDelay: "1.9s" }}
       >
-        <img
-          src="/images/banayara.png"
-          alt="Banyara"
-          className="h-[200px] object-contain"
-        />
-
-        <div className="max-w-[170px] text-white drop-shadow-[0_3px_10px_rgba(0,0,0,0.6)]">
-          <h3 className="font-['DM_Serif_Display'] text-3xl text-[#F2B233]">
-            Banyara
-          </h3>
-
-          <p className="mt-3 text-sm font-medium leading-6 text-white">
-            Our friend.
-            <br />
-            Our guide.
-            <br />
-            Our reminder to
-            <br />
-            keep growing.
-          </p>
-        </div>
       </div>
 
       <div className="absolute bottom-6 left-1/2 z-20 -translate-x-1/2">
