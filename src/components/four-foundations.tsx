@@ -13,7 +13,7 @@ const foundations = [
     title: "THINK",
     quote: "I wonder why...",
     subtitle: "The beginning of every discovery.",
-    bg: "bg-[#2F8FB3]",
+    bg: "bg-sky-blue",
     icon: Brain,
     image: foundationImg1,
   },
@@ -21,7 +21,7 @@ const foundations = [
     title: "FEEL",
     quote: "I understand how you feel.",
     subtitle: "The beginning of every meaningful relationship.",
-    bg: "bg-[#E7A08D]",
+    bg: "bg-orange",
     icon: Heart,
     image: foundationImg2,
   },
@@ -29,7 +29,7 @@ const foundations = [
     title: "MOVE",
     quote: "Let’s try.",
     subtitle: "The beginning of confidence.",
-    bg: "bg-[#8DAF75]",
+    bg: "bg-fresh-green",
     icon: Activity,
     image: foundationImg3,
   },
@@ -37,7 +37,7 @@ const foundations = [
     title: "PAUSE",
     quote: "I noticed.",
     subtitle: "The beginning of wisdom.",
-    bg: "bg-[#F2A937]",
+    bg: "bg-golden-yellow",
     icon: PauseCircle,
     image: foundationImg4,
   },
@@ -78,7 +78,7 @@ const FoundationsSection = () => {
     "opacity-0 translate-y-10 animate-[foundationFadeUp_1.4s_ease-out_forwards]";
 
   return (
-    <section ref={sectionRef} className="bg-white py-8 md:py-10 lg:py-[50px]">
+    <section ref={sectionRef} className="bg-white py-14 md:py-20">
       <style>{`
         @keyframes foundationFadeUp {
           from {
@@ -97,7 +97,7 @@ const FoundationsSection = () => {
         className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
       >
         <h2
-          className={`${fadeUp} mb-8 text-center text-2xl leading-tight text-[#082B35] sm:text-3xl lg:text-[34px]`}
+          className={`${fadeUp} mb-8 text-center text-2xl leading-tight text-dark-navy sm:text-3xl lg:text-[34px]`}
           style={{
             fontFamily: "DM Serif Display, serif",
             animationDelay: "0.1s",

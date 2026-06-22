@@ -29,10 +29,10 @@ export default function CampusSection() {
   }, []);
 
   return (
-    <section className="bg-[#F5F5F5] py-[50px]">
+    <section className="bg-[#F5F5F5] py-14 md:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid overflow-hidden lg:grid-cols-[50%_50%]">
-          {/* Left Image Carousel - No Border Radius */}
+        <div className="grid overflow-hidden rounded-[28px] bg-[#FAF8F1] lg:grid-cols-[50%_50%]">
+          {/* Left Image Carousel */}
           <div className="relative min-h-[320px] overflow-hidden lg:min-h-[520px]">
             <div
               className="flex h-full transition-transform duration-700 ease-in-out"
@@ -69,10 +69,10 @@ export default function CampusSection() {
           </div>
 
           {/* Right Content */}
-          <div className="flex min-h-[420px] items-center rounded-r-[28px] bg-[#FAF8F1] px-6 py-12 sm:px-10 lg:min-h-[520px] lg:px-14 xl:px-16">
+          <div className="flex min-h-[420px] items-center px-6 py-12 sm:px-10 lg:min-h-[520px] lg:px-14 xl:px-16">
             <div className="max-w-xl">
               <h2
-                className="mb-8 text-3xl leading-tight text-[#082B35] sm:text-4xl lg:text-5xl"
+                className="mb-8 text-3xl leading-tight text-dark-navy sm:text-4xl lg:text-5xl"
                 style={{ fontFamily: "DM Serif Display" }}
               >
                 A campus designed
@@ -112,7 +112,7 @@ export default function CampusSection() {
                 />
               </div>
 
-              <button className="inline-flex items-center rounded-full bg-[#0D4B5A] px-7 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#082B35]">
+              <button className="inline-flex items-center rounded-full bg-deep-teal px-7 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-dark-navy">
                 Explore Our Campus
                 <span className="ml-2">→</span>
               </button>
@@ -132,11 +132,11 @@ type CampusPointProps = {
 function CampusPoint({ icon, text }: CampusPointProps) {
   return (
     <div className="flex items-center gap-3">
-      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#EAF5EF] text-[#0D4B5A]">
+      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-fresh-green/20 text-deep-teal">
         {icon}
       </span>
 
-      <span className="text-sm font-medium text-[#082B35]/80">
+      <span className="text-sm font-medium text-dark-navy/80">
         {text}
       </span>
     </div>

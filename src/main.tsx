@@ -13,11 +13,13 @@ import ParentQuestionsSection from './components/parents-section'
 import FamiliesSection from './components/why-choose-us'
 import BanayaraSection from './components/meet-banayra'
 import CampusSection from './components/campus-section'
+import ChildrenFirstSection from './components/learning-apparoach'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Header />
     <HeroSection />
     <ParentQuestionsSection/>
+    <ChildrenFirstSection/>
     < FoundationsSection/>
     <BanayaraSection/>
     {/* <BanyaraSection/> */}

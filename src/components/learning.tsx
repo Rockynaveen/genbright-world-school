@@ -38,16 +38,16 @@ export default function LearningWallsSection() {
   }, []);
 
   return (
-    <section className="bg-white py-8 md:py-10 lg:py-[50px]">
+    <section className="bg-white py-14 md:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Carousel opts={{ align: "start", loop: true }} className="relative w-full">
           <div className="mb-6 flex items-end justify-between gap-6">
             <div data-aos="fade-up" data-aos-duration="1800">
-              <h2 className="font-['DM_Serif_Display'] text-3xl font-normal leading-tight text-[#082B35] md:text-4xl">
+              <h2 className="font-['DM_Serif_Display'] text-3xl font-normal leading-tight text-dark-navy md:text-4xl">
                 What if learning had no walls?
               </h2>
 
-              <p className="mt-2 text-sm font-medium text-[#0D4B5A]">
+              <p className="mt-2 text-sm font-medium text-deep-teal">
                 Explore our 13 Learning Centres.
               </p>
             </div>
@@ -58,9 +58,9 @@ export default function LearningWallsSection() {
               data-aos-delay="200"
               className="flex items-center gap-3"
             >
-              <CarouselPrevious className="static left-auto top-auto h-9 w-9 translate-x-0 translate-y-0 border border-[#0D4B5A]/30 bg-white text-[#0D4B5A] hover:bg-[#0D4B5A] hover:text-white" />
+              <CarouselPrevious className="static left-auto top-auto h-9 w-9 translate-x-0 translate-y-0 border border-deep-teal/30 bg-white text-deep-teal hover:bg-deep-teal hover:text-white" />
 
-              <CarouselNext className="static right-auto top-auto h-9 w-9 translate-x-0 translate-y-0 border border-[#0D4B5A] bg-[#0D4B5A] text-white hover:bg-[#082B35] hover:text-white" />
+              <CarouselNext className="static right-auto top-auto h-9 w-9 translate-x-0 translate-y-0 border border-deep-teal bg-deep-teal text-white hover:bg-dark-navy hover:text-white" />
             </div>
           </div>
 
@@ -75,26 +75,26 @@ export default function LearningWallsSection() {
                 className="basis-[82%] pl-4 sm:basis-[45%] md:basis-[30%] lg:basis-[20%]"
               >
                 <div className="group">
-                  <div className="relative h-[140px] overflow-hidden rounded-2xl border border-[#0D4B5A]/10 shadow-sm">
+                  <div className="relative h-[140px] overflow-hidden rounded-2xl border border-deep-teal/10 shadow-sm">
                     <img
                       src={item.image}
                       alt={item.title}
                       className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                     />
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#082B35]/75 via-[#082B35]/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-dark-navy/75 via-dark-navy/20 to-transparent" />
 
-                    <div className="absolute bottom-3 left-3 flex h-10 w-10 items-center justify-center rounded-full border border-white/60 bg-[#0D4B5A]/70 text-sm text-white backdrop-blur-sm">
+                    <div className="absolute bottom-3 left-3 flex h-10 w-10 items-center justify-center rounded-full border border-white/60 bg-deep-teal/70 text-sm text-white backdrop-blur-sm">
                       {item.icon}
                     </div>
                   </div>
 
                   <div className="mt-3 text-center">
-                    <h3 className="text-sm font-extrabold tracking-wide text-[#082B35]">
+                    <h3 className="text-sm font-extrabold tracking-wide text-dark-navy">
                       {item.title}
                     </h3>
 
-                    <p className="mt-1 text-xs leading-4 text-[#0D4B5A]">
+                    <p className="mt-1 text-xs leading-4 text-deep-teal">
                       {item.subtitle}
                     </p>
                   </div>

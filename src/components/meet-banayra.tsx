@@ -69,29 +69,29 @@ export default function BanayaraSection() {
   }, []);
 
   return (
-    <section className="relative z-10 overflow-hidden bg-[#F7F4EC] py-8 font-['Inter'] md:py-12">
+    <section className="relative z-10 overflow-hidden bg-[#F7F4EC] py-14 md:py-20 font-['Inter']">
       <div className="w-full overflow-hidden bg-[#FFFDF8]">
         <div className="grid items-stretch lg:grid-cols-[42%_58%]">
           {/* Left Content */}
           <div className="relative z-20 flex flex-col justify-center bg-[#FFFDF8] px-6 py-10 sm:px-10 md:px-14 lg:px-20 lg:py-16 xl:px-24">
             <div data-aos="fade-up" data-aos-delay="100">
-              <p className="mb-1 flex items-center gap-2 text-[18px] font-bold text-[#315C40] sm:text-[22px]">
-                <Leaf size={18} className="text-[#8BC34A]" />
+              <p className="mb-1 flex items-center gap-2 text-[18px] font-bold text-deep-teal sm:text-[22px]">
+                <Leaf size={18} className="text-fresh-green" />
                 Meet
-                <Leaf size={18} className="text-[#8BC34A]" />
+                <Leaf size={18} className="text-fresh-green" />
               </p>
 
-              <h2 className="font-['DM_Serif_Display'] text-[58px] leading-[0.9] tracking-[-0.03em] text-[#315C40] sm:text-[76px] md:text-[90px] lg:text-[82px] xl:text-[92px]">
+              <h2 className="font-['DM_Serif_Display'] text-[58px] leading-[0.9] tracking-[-0.03em] text-dark-navy sm:text-[76px] md:text-[90px] lg:text-[82px] xl:text-[92px]">
                 Banayara
               </h2>
 
-              <div className="mt-5 h-[2px] w-28 bg-[#8BC34A]" />
+              <div className="mt-5 h-[2px] w-28 bg-fresh-green" />
             </div>
 
             <p
               data-aos="fade-up"
               data-aos-delay="220"
-              className="mt-6 max-w-[360px] text-[15px] font-medium leading-7 text-[#082B35]/80 sm:text-[16px]"
+              className="mt-6 max-w-[360px] text-[15px] font-medium leading-7 text-dark-navy/80 sm:text-[16px]"
             >
               Our friend. Our guide. Our reminder to keep growing.
               <br />
@@ -109,19 +109,19 @@ export default function BanayaraSection() {
                     data-aos-delay={340 + index * 130}
                     className="group flex gap-4"
                   >
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#8BC34A]/20 transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-110 group-hover:bg-[#8BC34A]/30">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-fresh-green/20 transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-110 group-hover:bg-fresh-green/30">
                       <Icon
                         size={21}
                         strokeWidth={1.7}
-                        className="text-[#315C40]"
+                        className="text-deep-teal"
                       />
                     </div>
 
                     <div>
-                      <h3 className="text-[15px] font-bold text-[#315C40]">
+                      <h3 className="text-[15px] font-bold text-deep-teal">
                         {item.title}
                       </h3>
-                      <p className="mt-1 text-[13px] leading-5 text-[#082B35]/75">
+                      <p className="mt-1 text-[13px] leading-5 text-dark-navy/75">
                         {item.text}
                       </p>
                     </div>
@@ -133,7 +133,7 @@ export default function BanayaraSection() {
             <p
               data-aos="fade-up"
               data-aos-delay="760"
-              className="mt-8 max-w-[390px] text-[14px] font-medium leading-7 text-[#082B35]/80 sm:text-[15px]"
+              className="mt-8 max-w-[390px] text-[14px] font-medium leading-7 text-dark-navy/80 sm:text-[15px]"
             >
               Banayara journeys alongside every GenBright child, reminding them
               to stay grounded, stay curious, and keep growing.
@@ -169,21 +169,21 @@ export default function BanayaraSection() {
                   key={item.title}
                   data-aos="fade-up"
                   data-aos-delay={460 + index * 120}
-                  className="group flex gap-4 lg:border-r lg:border-[#0D4B5A]/10 lg:px-7 last:lg:border-r-0"
+                  className="group flex gap-4 lg:border-r lg:border-deep-teal/10 lg:px-7 last:lg:border-r-0"
                 >
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#8BC34A]/20 transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-110 group-hover:bg-[#8BC34A]/30">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-fresh-green/20 transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-110 group-hover:bg-fresh-green/30">
                     <Icon
                       size={24}
                       strokeWidth={1.7}
-                      className="text-[#315C40]"
+                      className="text-deep-teal"
                     />
                   </div>
 
                   <div>
-                    <h4 className="text-[14px] font-bold text-[#315C40]">
+                    <h4 className="text-[14px] font-bold text-deep-teal">
                       {item.title}
                     </h4>
-                    <p className="mt-1 text-[13px] leading-5 text-[#082B35]/75">
+                    <p className="mt-1 text-[13px] leading-5 text-dark-navy/75">
                       {item.text}
                     </p>
                   </div>

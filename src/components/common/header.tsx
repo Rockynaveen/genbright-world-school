@@ -13,7 +13,7 @@ const navItems = [
 
 export default function Header() {
   return (
-<header className="fixed inset-x-0 top-0 z-[100] border-b border-[#29A7D1]/10 bg-white/50 backdrop-blur-lg">
+<header className="fixed inset-x-0 top-0 z-[100] border-b border-sky-blue/10 bg-white/50 backdrop-blur-lg">
 <Container>
         <div className="flex h-24 items-center justify-between">
           {/* Logo */}
@@ -35,16 +35,16 @@ export default function Header() {
                   relative
                   text-[13px]
                   font-semibold
-                  text-[#082B35]
+                  text-dark-navy
                   transition-all
                   duration-300
-                  hover:text-[#29A7D1]
+                  hover:text-sky-blue
                   after:absolute
                   after:-bottom-1
                   after:left-0
                   after:h-[2px]
                   after:w-0
-                  after:bg-[#29A7D1]
+                  after:bg-sky-blue
                   after:transition-all
                   after:duration-300
                   hover:after:w-full
@@ -62,7 +62,7 @@ export default function Header() {
                 hidden
                 h-11
                 rounded-full
-                bg-[#0D4B5A]
+                bg-deep-teal
                 px-6
                 text-[13px]
                 font-semibold
@@ -70,7 +70,7 @@ export default function Header() {
                 shadow-md
                 transition-all
                 duration-300
-                hover:bg-[#082B35]
+                hover:bg-dark-navy
                 lg:flex
               "
             >
@@ -86,7 +86,7 @@ export default function Header() {
                 items-center
                 justify-center
                 rounded-full
-                bg-[#0D4B5A]
+                bg-deep-teal
                 text-white
                 lg:hidden
               "

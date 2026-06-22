@@ -21,7 +21,7 @@ const socialIcons = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#082B35] font-['Inter'] text-white">
+    <footer className="bg-dark-navy font-sans text-white">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-10">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1.2fr]">
           {/* Brand */}
@@ -41,7 +41,7 @@ export default function Footer() {
               {socialIcons.map((SocialIcon, index) => (
                 <button
                   key={index}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-[#29A7D1]/30 text-[#29A7D1] transition-all duration-300 hover:bg-[#29A7D1] hover:text-white"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-sky-blue/30 text-sky-blue transition-all duration-300 hover:bg-sky-blue hover:text-white"
                 >
                   <SocialIcon size={18} />
                 </button>
@@ -87,7 +87,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-['DM_Serif_Display'] text-2xl text-[#F2B233]">
+            <h3 className="font-heading text-xl text-golden-yellow">
               Connect
             </h3>
 
@@ -95,7 +95,7 @@ export default function Footer() {
               <div className="flex gap-3">
                 <IconMapPin
                   size={18}
-                  className="mt-1 shrink-0 text-[#29A7D1]"
+                  className="mt-1 shrink-0 text-sky-blue"
                 />
                 <p className="text-sm leading-6 text-white/80">
                   Donthanpalle, Mokila,
@@ -105,12 +105,12 @@ export default function Footer() {
               </div>
 
               <div className="flex gap-3">
-                <IconPhone size={18} className="mt-1 shrink-0 text-[#8BC34A]" />
+                <IconPhone size={18} className="mt-1 shrink-0 text-fresh-green" />
                 <p className="text-sm text-white/80">+91 888 444 1234</p>
               </div>
 
               <div className="flex gap-3">
-                <IconMail size={18} className="mt-1 shrink-0 text-[#F26A2E]" />
+                <IconMail size={18} className="mt-1 shrink-0 text-orange" />
                 <p className="text-sm text-white/80">hello@genbright.in</p>
               </div>
             </div>
@@ -125,19 +125,19 @@ export default function Footer() {
             </p>
 
             <div className="flex flex-wrap items-center gap-4 text-xs text-white/60">
-              <button className="transition hover:text-[#29A7D1]">
+              <button className="transition hover:text-sky-blue">
                 Privacy Policy
               </button>
 
               <span className="text-white/20">|</span>
 
-              <button className="transition hover:text-[#29A7D1]">
+              <button className="transition hover:text-sky-blue">
                 Terms of Use
               </button>
 
               <span className="text-white/20">|</span>
 
-              <button className="transition hover:text-[#29A7D1]">
+              <button className="transition hover:text-sky-blue">
                 Cookie Policy
               </button>
             </div>
@@ -156,7 +156,7 @@ type FooterColumnProps = {
 function FooterColumn({ title, items }: FooterColumnProps) {
   return (
     <div>
-      <h3 className="font-['DM_Serif_Display'] text-2xl text-[#F2B233]">
+      <h3 className="font-heading text-xl text-golden-yellow">
         {title}
       </h3>
 
@@ -164,7 +164,7 @@ function FooterColumn({ title, items }: FooterColumnProps) {
         {items.map((item) => (
           <li
             key={item}
-            className="cursor-pointer text-sm text-white/80 transition-colors duration-300 hover:text-[#29A7D1]"
+            className="cursor-pointer text-sm text-white/80 transition-colors duration-300 hover:text-sky-blue"
           >
             {item}
           </li>

@@ -41,15 +41,15 @@ export default function LeaveSchoolSection() {
             className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-[#082B35]/45 via-[#082B35]/15 to-transparent lg:bg-gradient-to-r lg:from-[#082B35]/55 lg:via-[#082B35]/25" />
+          <div className="absolute inset-0 bg-gradient-to-t from-dark-navy/45 via-dark-navy/15 to-transparent lg:bg-gradient-to-r lg:from-dark-navy/55 lg:via-dark-navy/25" />
         </div>
 
         {/* Content */}
-        <div className="flex flex-col justify-center bg-white px-5 py-10 sm:px-8 sm:py-12 md:px-12 md:py-14 lg:px-16 xl:px-20">
+        <div className="flex flex-col justify-center bg-white px-5 py-14 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           <h2
             data-aos="fade-up"
             data-aos-delay="200"
-            className="max-w-[620px] text-[34px] leading-[1.08] tracking-[-0.02em] text-[#082B35] sm:text-[42px] md:text-[52px] lg:text-[56px]"
+            className="max-w-[620px] text-[34px] leading-[1.08] tracking-[-0.02em] text-dark-navy sm:text-[42px] md:text-[52px] lg:text-[56px]"
             style={{ fontFamily: "DM Serif Display" }}
           >
             One day,
@@ -86,7 +86,7 @@ export default function LeaveSchoolSection() {
                   </div>
 
                   <p
-                    className="mt-2.5 text-[13px] font-semibold leading-[1.3] text-[#0D4B5A] transition-colors duration-300 group-hover:text-[#082B35] sm:text-[14px]"
+                    className="mt-2.5 text-[13px] font-semibold leading-[1.3] text-deep-teal transition-colors duration-300 group-hover:text-dark-navy sm:text-[14px]"
                     style={{ fontFamily: "Inter" }}
                   >
                     {item.title}
@@ -99,7 +99,7 @@ export default function LeaveSchoolSection() {
           <p
             data-aos="fade-up"
             data-aos-delay="850"
-            className="mt-8 max-w-[650px] text-[15px] font-medium leading-[1.75] text-[#082B35]/80 sm:mt-10 sm:text-[16px] md:text-[17px] lg:mt-12"
+            className="mt-8 max-w-[650px] text-[15px] font-medium leading-[1.75] text-dark-navy/80 sm:mt-10 sm:text-[16px] md:text-[17px] lg:mt-12"
             style={{ fontFamily: "Inter" }}
           >
             When they do, we hope they leave with more than knowledge.

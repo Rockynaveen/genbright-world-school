@@ -91,15 +91,15 @@ export default function HeroSection() {
       >
         <div className="max-w-[560px]">
           <h1
-            className={`${fadeUp} font-['DM_Serif_Display'] text-[48px] leading-[0.9] text-[#082B35] sm:text-[64px] lg:text-[76px]`}
+            className={`${fadeUp} font-heading text-[48px] leading-[0.9] text-dark-navy sm:text-[64px] lg:text-[76px]`}
             style={{ animationDelay: "0.1s" }}
           >
             Childhood
             <br />
-            deserves <span className="text-[#0D4B5A]">better.</span>
+            deserves <span className="text-deep-teal">better.</span>
           </h1>
 
-          <div className="mt-7 space-y-3 text-[15px] text-[#082B35]">
+          <div className="mt-7 space-y-3 text-[15px] text-dark-navy">
             {[
               "Not more pressure.",
               "Not more worksheets.",
@@ -110,22 +110,22 @@ export default function HeroSection() {
                 className={fadeUp}
                 style={{ animationDelay: `${0.4 + index * 0.25}s` }}
               >
-                <span className="mr-3 text-[#8BC34A]">🌿</span>
+                <span className="mr-3 text-fresh-green">🌿</span>
                 {text}
               </p>
             ))}
 
             <p
-              className={`${fadeUp} font-['DM_Serif_Display'] text-[26px] text-[#0D4B5A]`}
+              className={`${fadeUp} font-heading text-[26px] text-deep-teal`}
               style={{ animationDelay: "1.15s" }}
             >
-              <span className="mr-3 text-[#8BC34A]">🌿</span>
+              <span className="mr-3 text-fresh-green">🌿</span>
               Just more wonder.
             </p>
           </div>
 
           <p
-            className={`${fadeUp} mt-6 text-[16px] font-medium text-[#082B35]`}
+            className={`${fadeUp} mt-6 text-[16px] font-medium text-dark-navy`}
             style={{ animationDelay: "1.4s" }}
           >
             Look Within. Look Around. Look Beyond.
@@ -135,14 +135,14 @@ export default function HeroSection() {
             className={`${fadeUp} mt-8 flex flex-wrap items-center gap-4`}
             style={{ animationDelay: "1.65s" }}
           >
-            <button className="flex h-12 items-center rounded-full bg-[#0D4B5A] px-7 text-sm font-semibold text-white transition hover:bg-[#082B35]">
+            <button className="flex h-12 items-center rounded-full bg-deep-teal px-7 text-sm font-semibold text-white transition hover:bg-dark-navy">
               Book a Campus Visit
               <ArrowRight className="ml-3 h-4 w-4" />
             </button>
 
-            <button className="flex h-12 items-center gap-3 rounded-full bg-white px-5 text-sm font-semibold text-[#082B35] shadow-md">
-              <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#0D4B5A]">
-                <Play className="h-3 w-3 fill-[#0D4B5A] text-[#0D4B5A]" />
+            <button className="flex h-12 items-center gap-3 rounded-full bg-white px-5 text-sm font-semibold text-dark-navy shadow-md">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full border border-deep-teal">
+                <Play className="h-3 w-3 fill-deep-teal text-deep-teal" />
               </span>
               Watch Our Story
             </button>

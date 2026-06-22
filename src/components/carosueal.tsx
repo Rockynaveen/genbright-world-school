@@ -58,7 +58,7 @@ const FamilyCampusCarousel = () => {
   }, []);
 
   return (
-    <section className="w-full bg-[#F5F5F5] py-8 md:py-10 lg:py-[50px]">
+    <section className="w-full bg-[#F5F5F5] py-14 md:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-[28px] bg-[#FAF8F1]">
           <div
@@ -72,7 +72,7 @@ const FamilyCampusCarousel = () => {
               >
                 <div className="flex min-h-[420px] items-center px-6 py-12 sm:px-10 lg:min-h-[520px] lg:px-14 xl:px-16">
                   <div className="w-full max-w-xl">
-                    <h2 className="mb-8 font-serif text-3xl font-bold leading-tight text-[#163B3F] sm:text-4xl lg:text-5xl">
+                    <h2 className="mb-8 font-serif text-3xl font-bold leading-tight text-dark-navy sm:text-4xl lg:text-5xl">
                       {slide.title}
                     </h2>
 
@@ -99,8 +99,8 @@ const FamilyCampusCarousel = () => {
                 onClick={() => setActiveSlide(index)}
                 className={`h-2.5 rounded-full transition-all duration-300 ${
                   activeSlide === index
-                    ? "w-8 bg-[#0D4F4A]"
-                    : "w-2.5 bg-[#0D4F4A]/25"
+                    ? "w-8 bg-deep-teal"
+                    : "w-2.5 bg-deep-teal/25"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -122,7 +122,7 @@ const FamiliesContent = () => {
         <FamilyItem icon={<ShieldCheck />} text={<>Their child<br />belongs.</>} />
       </div>
 
-      <p className="max-w-xl text-sm font-semibold leading-7 text-[#163B3F] sm:text-base">
+      <p className="max-w-xl text-sm font-semibold leading-7 text-dark-navy sm:text-base">
         And because learning feels joyful again — every day, in every space,
         with every child.
       </p>
@@ -142,7 +142,7 @@ const CampusContent = () => {
         <CampusPoint icon={<ShieldCheck />} text="Moments of wonder around every corner" />
       </div>
 
-      <button className="inline-flex items-center rounded-full bg-[#0D4F4A] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#083F3B]">
+      <button className="inline-flex items-center rounded-full bg-deep-teal px-6 py-3 text-sm font-semibold text-white transition hover:bg-dark-navy">
         Explore Our Campus
         <span className="ml-2">→</span>
       </button>
@@ -158,11 +158,11 @@ type FamilyItemProps = {
 const FamilyItem = ({ icon, text }: FamilyItemProps) => {
   return (
     <div className="text-center">
-      <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full border border-[#A8B5AA] text-[#789083]">
+      <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full border border-deep-teal/35 text-deep-teal">
         <div className="h-7 w-7">{icon}</div>
       </div>
 
-      <p className="text-xs font-semibold leading-5 text-[#163B3F]/80 sm:text-sm">
+      <p className="text-xs font-semibold leading-5 text-dark-navy/80 sm:text-sm">
         {text}
       </p>
     </div>
@@ -176,8 +176,8 @@ type CampusPointProps = {
 
 const CampusPoint = ({ icon, text }: CampusPointProps) => {
   return (
-    <div className="flex items-center gap-3 text-sm font-medium text-[#163B3F]/80">
-      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#DDE5D3] text-[#0D4F4A]">
+    <div className="flex items-center gap-3 text-sm font-medium text-dark-navy/80">
+      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-fresh-green/20 text-deep-teal">
         <span className="h-3.5 w-3.5">{icon}</span>
       </span>
       <span>{text}</span>

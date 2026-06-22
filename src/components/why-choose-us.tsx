@@ -12,13 +12,13 @@ import familyImage from "/images/campus-front-view.png";
 
 export default function FamiliesSection() {
   return (
-    <section className="w-full bg-[#F5F5F5] py-[50px]">
+    <section className="w-full bg-[#F5F5F5] py-14 md:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid overflow-hidden rounded-[28px] bg-[#FAF8F1] lg:grid-cols-[50%_50%]">
           {/* Content */}
           <div className="flex min-h-[420px] items-center px-6 py-12 sm:px-10 lg:min-h-[520px] lg:px-14">
             <div className="max-w-xl">
-              <h2 className="mb-8 font-serif text-3xl font-bold leading-tight text-[#163B3F] sm:text-4xl lg:text-5xl">
+              <h2 className="mb-8 font-serif text-3xl font-bold leading-tight text-dark-navy sm:text-4xl lg:text-5xl">
                 Why families
                 <br />
                 choose GenBright.
@@ -70,7 +70,7 @@ export default function FamiliesSection() {
                 />
               </div>
 
-              <p className="text-sm font-semibold leading-7 text-[#163B3F] sm:text-base">
+              <p className="text-sm font-semibold leading-7 text-dark-navy sm:text-base">
                 And because learning feels joyful again — every day, in every
                 space, with every child.
               </p>
@@ -99,11 +99,11 @@ type FamilyItemProps = {
 function FamilyItem({ icon, text }: FamilyItemProps) {
   return (
     <div className="text-center">
-      <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full border border-[#A8B5AA] text-[#789083]">
+      <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full border border-deep-teal/35 text-deep-teal">
         <div className="h-7 w-7">{icon}</div>
       </div>
 
-      <p className="text-xs font-semibold leading-5 text-[#163B3F]/80 sm:text-sm">
+      <p className="text-xs font-semibold leading-5 text-dark-navy/80 sm:text-sm">
         {text}
       </p>
     </div>
