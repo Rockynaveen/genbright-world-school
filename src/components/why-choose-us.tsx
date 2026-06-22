@@ -1,24 +1,44 @@
 "use client";
 
+import { useEffect } from "react";
 import type { ReactNode } from "react";
-import {
-  Brain,
-  Footprints,
-  PlayCircle,
-  ShieldCheck,
-} from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+import { Brain, Footprints, PlayCircle, ShieldCheck } from "lucide-react";
 
 import familyImage from "/images/campus-front-view.png";
 
 export default function FamiliesSection() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      easing: "ease-out-cubic",
+      once: false,
+      mirror: true,
+      offset: 90,
+      anchorPlacement: "top-bottom",
+    });
+
+    AOS.refreshHard();
+  }, []);
+
   return (
-    <section className="w-full bg-white py-14 md:py-20">
+    <section className="w-full bg-white py-10 md:py-14">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid overflow-hidden rounded-[28px] bg-white lg:grid-cols-[50%_50%]">
           {/* Content */}
-          <div className="flex min-h-[420px] items-center px-6 py-12 sm:px-10 lg:min-h-[520px] lg:px-14">
+          <div
+            data-aos="fade-up"
+            className="flex min-h-[420px] items-center px-6 py-10 sm:px-10 lg:min-h-[520px] lg:px-14"
+          >
             <div className="max-w-xl">
-              <h2 className="mb-8 font-serif text-3xl font-bold leading-tight text-dark-navy sm:text-4xl lg:text-5xl">
+              <h2
+                data-aos="fade-up"
+                data-aos-delay="100"
+                className="mb-8 text-3xl font-bold leading-tight text-dark-navy sm:text-4xl lg:text-5xl"
+                style={{ fontFamily: "DM Serif Display, serif", fontWeight: 400 }}
+              >
                 Why families
                 <br />
                 choose GenBright.
@@ -26,6 +46,7 @@ export default function FamiliesSection() {
 
               <div className="mb-8 grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-4">
                 <FamilyItem
+                  delay={200}
                   icon={<Brain />}
                   text={
                     <>
@@ -37,6 +58,7 @@ export default function FamiliesSection() {
                 />
 
                 <FamilyItem
+                  delay={320}
                   icon={<PlayCircle />}
                   text={
                     <>
@@ -48,6 +70,7 @@ export default function FamiliesSection() {
                 />
 
                 <FamilyItem
+                  delay={440}
                   icon={<Footprints />}
                   text={
                     <>
@@ -59,6 +82,7 @@ export default function FamiliesSection() {
                 />
 
                 <FamilyItem
+                  delay={560}
                   icon={<ShieldCheck />}
                   text={
                     <>
@@ -70,7 +94,12 @@ export default function FamiliesSection() {
                 />
               </div>
 
-              <p className="text-sm font-semibold leading-7 text-dark-navy sm:text-base">
+              <p
+                data-aos="fade-up"
+                data-aos-delay="700"
+                className="text-sm font-semibold leading-7 text-dark-navy sm:text-base"
+                style={{ fontFamily: "Inter, sans-serif" }}
+              >
                 And because learning feels joyful again — every day, in every
                 space, with every child.
               </p>
@@ -78,7 +107,11 @@ export default function FamiliesSection() {
           </div>
 
           {/* Image */}
-          <div className="relative min-h-[320px] lg:min-h-[520px]">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="250"
+            className="relative min-h-[320px] overflow-hidden lg:min-h-[520px]"
+          >
             <img
               src={familyImage}
               alt="Families"
@@ -94,16 +127,20 @@ export default function FamiliesSection() {
 type FamilyItemProps = {
   icon: ReactNode;
   text: ReactNode;
+  delay: number;
 };
 
-function FamilyItem({ icon, text }: FamilyItemProps) {
+function FamilyItem({ icon, text, delay }: FamilyItemProps) {
   return (
-    <div className="text-center">
-      <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full border border-deep-teal/35 text-deep-teal">
+    <div data-aos="fade-up" data-aos-delay={delay} className="text-center">
+      <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full border border-deep-teal/35 text-deep-teal transition duration-300 hover:-translate-y-1 hover:bg-deep-teal hover:text-white">
         <div className="h-7 w-7">{icon}</div>
       </div>
 
-      <p className="text-xs font-semibold leading-5 text-dark-navy/80 sm:text-sm">
+      <p 
+        className="text-xs font-semibold leading-5 text-dark-navy/80 sm:text-sm"
+        style={{ fontFamily: "Inter, sans-serif" }}
+      >
         {text}
       </p>
     </div>

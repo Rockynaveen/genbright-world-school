@@ -27,7 +27,7 @@ export default function LeaveSchoolSection() {
   }, []);
 
   return (
-    <section className="overflow-hidden bg-white">
+    <section className="overflow-hidden bg-white py-10 md:py-14">
       <div className="grid grid-cols-1 items-stretch lg:grid-cols-[1fr_1.1fr]">
         {/* Image */}
         <div

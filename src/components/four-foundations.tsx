@@ -78,7 +78,7 @@ const FoundationsSection = () => {
     "opacity-0 translate-y-10 animate-[foundationFadeUp_1.4s_ease-out_forwards]";
 
   return (
-    <section ref={sectionRef} className="bg-white py-14 md:py-20">
+    <section ref={sectionRef} className="bg-white py-10 md:py-14">
       <style>{`
         @keyframes foundationFadeUp {
           from {

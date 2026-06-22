@@ -27,7 +27,7 @@ const centers = [
 export default function LearningWallsSection() {
   useEffect(() => {
     AOS.init({
-      duration: 1800,
+      duration: 1300,
       easing: "ease-out-cubic",
       once: false,
       mirror: true,
@@ -38,29 +38,29 @@ export default function LearningWallsSection() {
   }, []);
 
   return (
-    <section className="bg-white py-14 md:py-20">
+    <section className="bg-white pt-6 pb-10 md:pt-14 md:pb-14">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Carousel opts={{ align: "start", loop: true }} className="relative w-full">
-          <div className="mb-6 flex items-end justify-between gap-6">
-            <div data-aos="fade-up" data-aos-duration="1800">
-              <h2 className="font-['DM_Serif_Display'] text-3xl font-normal leading-tight text-dark-navy md:text-4xl">
+          <div className="mb-5 flex items-end justify-between gap-6">
+            <div data-aos="fade-up">
+              <h2 
+                className="text-3xl font-normal leading-tight text-dark-navy md:text-4xl"
+                style={{ fontFamily: "DM Serif Display, serif" }}
+              >
                 What if learning had no walls?
               </h2>
 
-              <p className="mt-2 text-sm font-medium text-deep-teal">
+              <p 
+                className="mt-2 text-sm font-medium text-deep-teal"
+                style={{ fontFamily: "Inter, sans-serif" }}
+              >
                 Explore our 13 Learning Centres.
               </p>
             </div>
 
-            <div
-              data-aos="fade-up"
-              data-aos-duration="1800"
-              data-aos-delay="200"
-              className="flex items-center gap-3"
-            >
-              <CarouselPrevious className="static left-auto top-auto h-9 w-9 translate-x-0 translate-y-0 border border-deep-teal/30 bg-white text-deep-teal hover:bg-deep-teal hover:text-white" />
-
-              <CarouselNext className="static right-auto top-auto h-9 w-9 translate-x-0 translate-y-0 border border-deep-teal bg-deep-teal text-white hover:bg-dark-navy hover:text-white" />
+            <div data-aos="fade-up" data-aos-delay="150" className="flex items-center gap-3">
+              <CarouselPrevious className="static h-9 w-9 translate-x-0 translate-y-0 border border-deep-teal/30 bg-white text-deep-teal hover:bg-deep-teal hover:text-white" />
+              <CarouselNext className="static h-9 w-9 translate-x-0 translate-y-0 border border-deep-teal bg-deep-teal text-white hover:bg-dark-navy hover:text-white" />
             </div>
           </div>
 
@@ -69,9 +69,7 @@ export default function LearningWallsSection() {
               <CarouselItem
                 key={`${item.title}-${index}`}
                 data-aos="fade-up"
-                data-aos-duration="1800"
-                data-aos-delay={index * 300}
-                data-aos-easing="ease-out-cubic"
+                data-aos-delay={index * 120}
                 className="basis-[82%] pl-4 sm:basis-[45%] md:basis-[30%] lg:basis-[20%]"
               >
                 <div className="group">
@@ -90,11 +88,17 @@ export default function LearningWallsSection() {
                   </div>
 
                   <div className="mt-3 text-center">
-                    <h3 className="text-sm font-extrabold tracking-wide text-dark-navy">
+                    <h3 
+                      className="text-sm font-extrabold tracking-wide text-dark-navy"
+                      style={{ fontFamily: "Inter, sans-serif" }}
+                    >
                       {item.title}
                     </h3>
 
-                    <p className="mt-1 text-xs leading-4 text-deep-teal">
+                    <p 
+                      className="mt-1 text-xs leading-4 text-deep-teal"
+                      style={{ fontFamily: "Inter, sans-serif" }}
+                    >
                       {item.subtitle}
                     </p>
                   </div>
