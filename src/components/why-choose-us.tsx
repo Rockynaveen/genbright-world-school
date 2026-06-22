@@ -36,15 +36,6 @@ export default function FamiliesSection() {
           data-aos="fade-up"
           className="mb-10 text-center"
         >
-          <p
-            className="text-sm font-semibold uppercase tracking-[0.3em] text-[#29A7D1]"
-            style={{ fontFamily: "Inter, sans-serif" }}
-          >
-            WHY CHOOSE US
-          </p>
-
-          <div className="mx-auto mt-3 h-[2px] w-16 bg-[#29A7D1]" />
-
           <h2
             className="mt-4 text-[34px] leading-none text-[#082B35] sm:text-[42px] md:text-[48px]"
             style={{

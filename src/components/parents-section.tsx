@@ -4,256 +4,223 @@ import { useEffect } from "react";
 import type { ReactNode } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import {
-  BookOpen,
-  Globe2,
-  Heart,
-  Smile,
-  Sprout,
-  Star,
-} from "lucide-react";
+import { BookOpen, Globe2, Heart, Smile, Sprout, Star } from "lucide-react";
 
 const colors = {
-  deepTeal: "#0D4B5A",
-  skyBlue: "#29A7D1",
-  goldenYellow: "#F2B233",
-  orange: "#F26A2E",
-  freshGreen: "#8BC34A",
-  darkNavy: "#082B35",
+    deepTeal: "#0D4B5A",
+    skyBlue: "#29A7D1",
+    goldenYellow: "#F2B233",
+    orange: "#F26A2E",
+    freshGreen: "#8BC34A",
+    darkNavy: "#082B35",
 };
 
 type CardProps = {
-  icon: ReactNode;
-  iconBg: string;
-  title: ReactNode;
-  className?: string;
+    icon: ReactNode;
+    iconBg: string;
+    title: ReactNode;
+    className?: string;
 };
 
 function QuestionCard({ icon, iconBg, title, className = "" }: CardProps) {
-  return (
-    <div
-      className={`relative w-[118px] rounded-[16px] bg-white px-3 pb-3 pt-7 text-center shadow-[0_8px_24px_rgba(8,43,53,0.08)] sm:w-[140px] sm:rounded-[18px] sm:px-4 sm:pb-4 sm:pt-8 lg:w-[150px] lg:rounded-[20px] ${className}`}
-    >
-      <div className="absolute left-1/2 top-[-20px] -translate-x-1/2 sm:top-[-24px]">
-        <div className="flex h-[42px] w-[42px] items-center justify-center rounded-full bg-white shadow-md sm:h-[50px] sm:w-[50px]">
-          <div
-            className="flex h-[32px] w-[32px] items-center justify-center rounded-full text-white sm:h-[40px] sm:w-[40px]"
-            style={{ backgroundColor: iconBg }}
-          >
-            {icon}
-          </div>
+    return (
+        <div
+            className={`relative w-[145px] rounded-[20px] bg-white px-4 pb-5 pt-10 text-center shadow-[0_12px_32px_rgba(8,43,53,0.12)] sm:w-[170px] sm:px-5 sm:pb-6 sm:pt-11 lg:w-[185px] ${className}`}
+        >
+            <div className="absolute left-1/2 top-[-28px] -translate-x-1/2 sm:top-[-32px]">
+                <div className="flex h-[58px] w-[58px] items-center justify-center rounded-full bg-white shadow-md sm:h-[66px] sm:w-[66px]">
+                    <div
+                        className="flex h-[46px] w-[46px] items-center justify-center rounded-full text-white sm:h-[54px] sm:w-[54px]"
+                        style={{ backgroundColor: iconBg }}
+                    >
+                        {icon}
+                    </div>
+                </div>
+            </div>
+
+            <h3
+                className="text-[13px] font-medium leading-[1.45] sm:text-[14px] lg:text-[15px]"
+                style={{ color: colors.darkNavy, fontFamily: "Inter" }}
+            >
+                {title}
+            </h3>
+
+            <div
+                className="mx-auto mt-3 h-[2px] w-7 rounded-full"
+                style={{ backgroundColor: iconBg }}
+            />
         </div>
-      </div>
-
-      <h3
-        className="text-[11px] font-medium leading-[1.35] sm:text-[12px] lg:text-[13px]"
-        style={{ color: colors.darkNavy, fontFamily: "Inter" }}
-      >
-        {title}
-      </h3>
-
-      <div
-        className="mx-auto mt-2 h-[2px] w-5 rounded-full sm:w-6"
-        style={{ backgroundColor: iconBg }}
-      />
-    </div>
-  );
+    );
 }
 
 export default function ParentQuestionsSection() {
-  useEffect(() => {
-    AOS.init({
-      duration: 900,
-      easing: "ease-out-cubic",
-      once: false,
-      mirror: true,
-      offset: 90,
-    });
+    useEffect(() => {
+        AOS.init({
+            duration: 900,
+            easing: "ease-out-cubic",
+            once: false,
+            mirror: true,
+            offset: 90,
+        });
 
-    AOS.refresh();
-  }, []);
+        AOS.refreshHard();
+    }, []);
 
-  return (
-    <section className="overflow-hidden bg-white py-10 md:py-14">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div data-aos="fade-up" className="text-center">
-          <p
-            className="text-[11px] font-semibold uppercase tracking-[0.25em] sm:text-sm sm:tracking-[0.35em]"
-            style={{ color: colors.goldenYellow, fontFamily: "Inter" }}
-          >
-            Every Parent Asks...
-          </p>
+    return (
+        <section className="overflow-hidden bg-white py-10 md:py-14">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div data-aos="fade-up" className="text-center">
+                    <p
+                        className="text-[13px] font-semibold uppercase tracking-[0.25em] sm:text-[15px] sm:tracking-[0.35em]"
+                        style={{
+                            color: "#000000",
+                            fontFamily: "DM Serif Display, serif",
+                        }}          >
+                        Every Parent Asks
+                    </p>
+                </div>
 
-          <div
-            className="mx-auto mt-2 h-[2px] w-14 sm:w-16"
-            style={{ backgroundColor: colors.goldenYellow }}
-          />
+                <div className="relative mx-auto mt-8 h-[470px] max-w-[390px] sm:h-[660px] sm:max-w-[740px] md:h-[690px] md:max-w-[900px] lg:h-[750px] lg:max-w-[1080px]">
+                    <div
+                        data-aos="zoom-in"
+                        className="absolute left-1/2 top-[47%] z-0 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-dotted sm:h-[460px] sm:w-[460px] md:h-[530px] md:w-[530px] lg:h-[610px] lg:w-[610px]"
+                        style={{ borderColor: `${colors.deepTeal}70` }}
+                    />
 
-          <h2
-            className="mt-3 text-[38px] leading-none sm:text-[52px] md:text-[62px] lg:text-[68px]"
-            style={{
-              color: colors.darkNavy,
-              fontFamily: "DM Serif Display",
-            }}
-          >
-            Every parent asks...
-          </h2>
+                    <div
+                        data-aos="fade-up"
+                        className="absolute left-1/2 top-[47%] z-20 h-[190px] w-[150px] -translate-x-1/2 -translate-y-1/2 sm:h-[330px] sm:w-[270px] md:h-[440px] md:w-[360px] lg:h-[480px] lg:w-[390px]"
+                    >
+                        <div className="absolute left-1/2 top-1/2 h-[130px] w-[130px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#29A7D1]/20 blur-[60px] sm:h-[250px] sm:w-[250px] md:h-[310px] md:w-[310px]" />
 
-          <div className="mt-4 flex items-center justify-center gap-3 sm:gap-4">
-            <span
-              className="h-px w-14 border-t border-dotted sm:w-20"
-              style={{ borderColor: colors.goldenYellow }}
-            />
-            <Sprout size={20} style={{ color: colors.goldenYellow }} />
-            <span
-              className="h-px w-14 border-t border-dotted sm:w-20"
-              style={{ borderColor: colors.goldenYellow }}
-            />
-          </div>
-        </div>
+                        <img
+                            src="/images/women-thinking-removebg-preview.png"
+                            alt="Parent thinking"
+                            className="relative z-10 h-full w-full object-contain"
+                            style={{
+                                WebkitMaskImage:
+                                    "linear-gradient(to bottom, black 0%, black 78%, rgba(0,0,0,0.85) 90%, transparent 100%)",
+                                maskImage:
+                                    "linear-gradient(to bottom, black 0%, black 78%, rgba(0,0,0,0.85) 90%, transparent 100%)",
+                            }}
+                        />
 
-        <div className="relative mx-auto mt-8 h-[420px] max-w-[360px] sm:h-[620px] sm:max-w-[700px] md:h-[650px] md:max-w-[850px] lg:h-[720px] lg:max-w-[1000px]">
-          <div
-            data-aos="zoom-in"
-            className="absolute left-1/2 top-[47%] z-0 h-[290px] w-[290px] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-dotted sm:h-[450px] sm:w-[450px] md:h-[520px] md:w-[520px] lg:h-[600px] lg:w-[600px]"
-            style={{ borderColor: `${colors.deepTeal}70` }}
-          />
+                        <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-20 h-[60px] bg-gradient-to-t from-white via-white/60 to-transparent sm:h-[90px] md:h-[110px]" />
+                    </div>
 
-          <div
-            data-aos="fade-up"
-            className="absolute left-1/2 top-[47%] z-20 h-[180px] w-[140px] -translate-x-1/2 -translate-y-1/2 sm:h-[320px] sm:w-[260px] md:h-[430px] md:w-[350px] lg:h-[470px] lg:w-[380px]"
-          >
-            <div className="absolute left-1/2 top-1/2 h-[120px] w-[120px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#29A7D1]/20 blur-[60px] sm:h-[240px] sm:w-[240px] md:h-[300px] md:w-[300px]" />
+                    <div
+                        data-aos="fade-up"
+                        className="absolute left-[20px] top-[70px] z-30 sm:left-[95px] sm:top-[120px] md:left-[150px] lg:left-[205px] lg:top-[135px]"
+                    >
+                        <QuestionCard
+                            icon={<Smile size={21} />}
+                            iconBg={colors.orange}
+                            title={
+                                <>
+                                    Will my child
+                                    <br />
+                                    be <span style={{ color: colors.orange }}>happy?</span>
+                                </>
+                            }
+                        />
+                    </div>
 
-            <img
-              src="/images/women-thinking-removebg-preview.png"
-              alt="Parent thinking"
-              className="relative z-10 h-full w-full object-contain"
-              style={{
-                WebkitMaskImage:
-                  "linear-gradient(to bottom, black 0%, black 78%, rgba(0,0,0,0.85) 90%, transparent 100%)",
-                maskImage:
-                  "linear-gradient(to bottom, black 0%, black 78%, rgba(0,0,0,0.85) 90%, transparent 100%)",
-              }}
-            />
+                    <div
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                        className="absolute right-[20px] top-[70px] z-30 sm:right-[95px] sm:top-[120px] md:right-[150px] lg:right-[205px] lg:top-[135px]"
+                    >
+                        <QuestionCard
+                            icon={<Star size={21} />}
+                            iconBg={colors.freshGreen}
+                            title={
+                                <>
+                                    Will they
+                                    <br />
+                                    be{" "}
+                                    <span style={{ color: colors.freshGreen }}>confident?</span>
+                                </>
+                            }
+                        />
+                    </div>
 
-            <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-20 h-[60px] bg-gradient-to-t from-white via-white/60 to-transparent sm:h-[90px] md:h-[110px]" />
-          </div>
+                    <div
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                        className="absolute left-[5px] top-[230px] z-30 sm:left-[55px] sm:top-[320px] md:left-[110px] lg:left-[145px] lg:top-[330px]"
+                    >
+                        <QuestionCard
+                            icon={<Heart size={21} />}
+                            iconBg={colors.skyBlue}
+                            title={
+                                <>
+                                    Will they
+                                    <br />
+                                    be <span style={{ color: colors.skyBlue }}>kind?</span>
+                                </>
+                            }
+                        />
+                    </div>
 
-          <div
-            data-aos="fade-up"
-            className="absolute left-2 top-[45px] z-30 sm:left-[90px] sm:top-[90px] md:left-[150px] lg:left-[185px] lg:top-[100px]"
-          >
-            <QuestionCard
-              icon={<Smile size={16} />}
-              iconBg={colors.orange}
-              title={
-                <>
-                  Will my child
-                  <br />
-                  be <span style={{ color: colors.orange }}>happy?</span>
-                </>
-              }
-            />
-          </div>
+                    <div
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                        className="absolute right-[5px] top-[230px] z-30 sm:right-[55px] sm:top-[320px] md:right-[110px] lg:right-[145px] lg:top-[330px]"
+                    >
+                        <QuestionCard
+                            icon={<BookOpen size={21} />}
+                            iconBg={colors.goldenYellow}
+                            title={
+                                <>
+                                    Will they
+                                    <br />
+                                    <span style={{ color: colors.goldenYellow }}>
+                                        love learning?
+                                    </span>
+                                </>
+                            }
+                        />
+                    </div>
 
-          <div
-            data-aos="fade-up"
-            data-aos-delay="100"
-            className="absolute right-2 top-[45px] z-30 sm:right-[90px] sm:top-[90px] md:right-[150px] lg:right-[185px] lg:top-[100px]"
-          >
-            <QuestionCard
-              icon={<Star size={16} />}
-              iconBg={colors.freshGreen}
-              title={
-                <>
-                  Will they
-                  <br />
-                  be{" "}
-                  <span style={{ color: colors.freshGreen }}>confident?</span>
-                </>
-              }
-            />
-          </div>
+                    <div
+                        data-aos="fade-up"
+                        data-aos-delay="400"
+                        className="absolute bottom-[55px] left-1/2 z-30 -translate-x-1/2 sm:bottom-[105px] lg:bottom-[120px]"
+                    >
+                        <QuestionCard
+                            icon={<Globe2 size={21} />}
+                            iconBg={colors.deepTeal}
+                            className="w-[285px] sm:w-[330px] lg:w-[350px]"
+                            title={
+                                <>
+                                    Will they be ready for a world
+                                    <br />
+                                    we{" "}
+                                    <span style={{ color: colors.deepTeal }}>
+                                        cannot predict?
+                                    </span>
+                                </>
+                            }
+                        />
+                    </div>
+                </div>
 
-          <div
-            data-aos="fade-up"
-            data-aos-delay="200"
-            className="absolute left-0 top-[200px] z-30 sm:left-[30px] sm:top-[300px] md:left-[70px] lg:top-[310px]"
-          >
-            <QuestionCard
-              icon={<Heart size={16} />}
-              iconBg={colors.skyBlue}
-              title={
-                <>
-                  Will they
-                  <br />
-                  be <span style={{ color: colors.skyBlue }}>kind?</span>
-                </>
-              }
-            />
-          </div>
+                <div
+                    data-aos="fade-up"
+                    className="mt-[-5px] flex items-center justify-center gap-3 sm:mt-[-35px] lg:mt-[-45px]"
+                >
 
-          <div
-            data-aos="fade-up"
-            data-aos-delay="300"
-            className="absolute right-0 top-[200px] z-30 sm:right-[30px] sm:top-[300px] md:right-[70px] lg:top-[310px]"
-          >
-            <QuestionCard
-              icon={<BookOpen size={16} />}
-              iconBg={colors.goldenYellow}
-              title={
-                <>
-                  Will they
-                  <br />
-                  <span style={{ color: colors.goldenYellow }}>
-                    love learning?
-                  </span>
-                </>
-              }
-            />
-          </div>
-
-          <div
-            data-aos="fade-up"
-            data-aos-delay="400"
-            className="absolute bottom-[20px] left-1/2 z-30 -translate-x-1/2 sm:bottom-[70px] lg:bottom-[85px]"
-          >
-            <QuestionCard
-              icon={<Globe2 size={16} />}
-              iconBg={colors.deepTeal}
-              className="w-[240px] sm:w-[270px] lg:w-[280px]"
-              title={
-                <>
-                  Will they be ready for a world
-                  <br />
-                  we{" "}
-                  <span style={{ color: colors.deepTeal }}>
-                    cannot predict?
-                  </span>
-                </>
-              }
-            />
-          </div>
-        </div>
-
-        <div
-          data-aos="fade-up"
-          className="mt-[-5px] flex items-center justify-center gap-3 sm:mt-[-35px] lg:mt-[-45px]"
-        >
-          <Sprout size={20} style={{ color: colors.goldenYellow }} />
-
-          <p
-            className="text-center text-[18px] leading-snug sm:text-[22px] lg:text-[24px]"
-            style={{
-              color: colors.darkNavy,
-              fontFamily: "DM Serif Display",
-            }}
-          >
-            At GenBright, these questions shape everything we do.
-          </p>
-        </div>
-      </div>
-    </section>
-  );
+                    <p
+                        className="text-center text-[19px] leading-snug sm:text-[23px] lg:text-[25px]"
+                        style={{
+                            color: colors.darkNavy,
+                            fontFamily: "DM Serif Display",
+                        }}
+                    >
+                        At GenBright, these questions shape everything we do.
+                    </p>
+                </div>
+            </div>
+        </section>
+    );
 }

@@ -79,9 +79,7 @@ export default function BanayaraSection() {
                 className="mb-1 flex items-center gap-2 text-[18px] font-bold text-deep-teal sm:text-[22px]"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
-                <Leaf size={18} className="text-fresh-green" />
                 Meet
-                <Leaf size={18} className="text-fresh-green" />
               </p>
 
               <h2
@@ -94,7 +92,6 @@ export default function BanayaraSection() {
                 Banayara
               </h2>
 
-              <div className="mt-4 h-[2px] w-28 bg-fresh-green" />
             </div>
 
             <p

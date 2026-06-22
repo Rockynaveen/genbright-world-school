@@ -20,7 +20,7 @@ const foundations = [
   {
     title: "FEEL",
     quote: "I understand how you feel.",
-    subtitle: "The beginning of   meaningful relationship.",
+    subtitle: "The beginning of meaningful relationship.",
     bg: "bg-orange",
     icon: Heart,
     image: foundationImg2,
@@ -64,9 +64,7 @@ const FoundationsSection = () => {
           wasVisible = false;
         }
       },
-      {
-        threshold: 0.3,
-      }
+      { threshold: 0.3 }
     );
 
     observer.observe(section);
@@ -92,10 +90,7 @@ const FoundationsSection = () => {
         }
       `}</style>
 
-      <div
-        key={animateKey}
-        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
-      >
+      <div key={animateKey} className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2
           className={`${fadeUp} mb-8 text-center text-2xl leading-tight text-dark-navy sm:text-3xl lg:text-[34px]`}
           style={{
@@ -113,23 +108,36 @@ const FoundationsSection = () => {
             return (
               <div
                 key={item.title}
-                className={`${fadeUp} relative h-[280px] sm:h-[300px] lg:h-[320px] overflow-hidden rounded-[18px] ${item.bg} shadow-[0_14px_35px_rgba(8,43,53,0.14)]`}
+                className={`${fadeUp} relative h-[285px] overflow-hidden rounded-[18px] ${item.bg} shadow-[0_14px_35px_rgba(8,43,53,0.14)] sm:h-[305px] lg:h-[325px]`}
                 style={{
                   animationDelay: `${0.35 + index * 0.25}s`,
                 }}
               >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className={`absolute bottom-0 right-0 z-10 object-cover ${index === 1
-                    ? "h-[190px] w-[140px] sm:h-[210px] sm:w-[160px] lg:h-[230px] lg:w-[175px] object-center"
-                    : index === 2
-                      ? "h-[240px] w-[180px] sm:h-[260px] sm:w-[200px] lg:h-[280px] lg:w-[230px] object-[35%_center]"
-                      : "h-[240px] w-[140px] sm:h-[260px] sm:w-[160px] lg:h-[280px] lg:w-[180px] object-center"
-                    }`}
-                />
+                <div className="absolute inset-0 z-0 bg-gradient-to-br from-white/20 via-transparent to-black/10" />
 
-                <div className="absolute inset-0 z-20 bg-gradient-to-r from-black/25 via-black/5 to-transparent" />
+                <div className="absolute bottom-0 right-0 z-10 h-[88%] w-[82%] overflow-visible">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className={`absolute bottom-0 right-0 h-full w-full object-contain object-bottom ${
+                      index === 1
+                        ? "scale-[1.18]"
+                        : index === 2
+                          ? "scale-[1.32]"
+                          : "scale-[1.22]"
+                    }`}
+                    style={{
+                      WebkitMaskImage:
+                        "linear-gradient(to bottom, black 0%, black 72%, rgba(0,0,0,0.75) 88%, transparent 100%)",
+                      maskImage:
+                        "linear-gradient(to bottom, black 0%, black 72%, rgba(0,0,0,0.75) 88%, transparent 100%)",
+                    }}
+                  />
+                </div>
+
+                <div className="absolute inset-0 z-20 bg-gradient-to-r from-black/30 via-black/10 to-transparent" />
+
+                <div className="absolute bottom-0 left-0 right-0 z-20 h-[90px] bg-gradient-to-t from-white/10 via-transparent to-transparent" />
 
                 <div className="relative z-30 flex h-full flex-col p-5 text-white">
                   <div className="flex items-start justify-between gap-4">
@@ -150,9 +158,11 @@ const FoundationsSection = () => {
                     “{item.quote}”
                   </p>
 
-                  <p className="mt-3 max-w-[135px] text-[12px] font-medium leading-relaxed text-white/90">
+                  <p className="mt-3 max-w-[145px] text-[12px] font-medium leading-relaxed text-white/90">
                     {item.subtitle}
                   </p>
+
+                  <div className="mt-auto h-2" />
                 </div>
               </div>
             );
