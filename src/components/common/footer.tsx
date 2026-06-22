@@ -98,30 +98,20 @@ export default function Footer() {
                   className="mt-1 shrink-0 text-[#29A7D1]"
                 />
                 <p className="text-sm leading-6 text-white/80">
-                  Attibele, Anekal Taluk,
+                  Donthanpalle, Mokila,
                   <br />
-                  Bengaluru – 562107
+                  Hyderabad – 501203
                 </p>
               </div>
 
               <div className="flex gap-3">
-                <IconPhone
-                  size={18}
-                  className="mt-1 shrink-0 text-[#8BC34A]"
-                />
-                <p className="text-sm text-white/80">
-                  +91 888 444 1234
-                </p>
+                <IconPhone size={18} className="mt-1 shrink-0 text-[#8BC34A]" />
+                <p className="text-sm text-white/80">+91 888 444 1234</p>
               </div>
 
               <div className="flex gap-3">
-                <IconMail
-                  size={18}
-                  className="mt-1 shrink-0 text-[#F26A2E]"
-                />
-                <p className="text-sm text-white/80">
-                  hello@genbright.in
-                </p>
+                <IconMail size={18} className="mt-1 shrink-0 text-[#F26A2E]" />
+                <p className="text-sm text-white/80">hello@genbright.in</p>
               </div>
             </div>
           </div>
