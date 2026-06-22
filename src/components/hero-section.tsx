@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Play, ChevronDown } from "lucide-react";
 
 export default function HeroSection() {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -24,9 +24,7 @@ export default function HeroSection() {
           wasVisible = false;
         }
       },
-      {
-        threshold: 0.35,
-      }
+      { threshold: 0.35 }
     );
 
     observer.observe(section);
@@ -40,7 +38,7 @@ export default function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative h-[600px] overflow-hidden bg-[#F8FAF4] sm:h-[650px] lg:h-[680px]"
+      className="relative h-[600px] overflow-visible bg-[#F8FAF4] sm:h-[650px] lg:h-[680px]"
     >
       <style>{`
         @keyframes heroFadeUp {
@@ -53,15 +51,39 @@ export default function HeroSection() {
             transform: translateY(0);
           }
         }
+
+        @keyframes arrowFloat {
+          0%, 100% {
+            opacity: 0.45;
+            transform: translateY(-4px);
+          }
+          50% {
+            opacity: 1;
+            transform: translateY(7px);
+          }
+        }
+
+        @keyframes arrowPulse {
+          0%, 100% {
+            transform: scale(1);
+            box-shadow: 0 10px 30px rgba(8, 43, 53, 0.12);
+          }
+          50% {
+            transform: scale(1.04);
+            box-shadow: 0 14px 36px rgba(8, 43, 53, 0.18);
+          }
+        }
       `}</style>
 
-      <img
-        src="/images/hero.png"
-        alt="GenBright Hero"
-        className="absolute inset-0 h-full w-full object-cover object-center"
-      />
+      <div className="absolute inset-0 overflow-hidden">
+        <img
+          src="/images/hero.png"
+          alt="GenBright Hero"
+          className="h-full w-full object-cover object-center"
+        />
 
-      <div className="absolute inset-0 bg-gradient-to-r from-white/65 via-white/10 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/65 via-white/10 to-transparent" />
+      </div>
 
       <div
         key={animateKey}
@@ -128,17 +150,23 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div
-        key={`banyara-${animateKey}`}
-        className={`${fadeUp} absolute bottom-16 right-10 hidden items-center gap-5 lg:flex`}
-        style={{ animationDelay: "1.9s" }}
-      >
-      </div>
-
-      <div className="absolute bottom-6 left-1/2 z-20 -translate-x-1/2">
-        <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/80 bg-white/20 text-xl text-white backdrop-blur-md">
-          ↓
-        </div>
+      {/* Scroll Arrow - same style like reference image */}
+      <div className="absolute bottom-[-28px] left-1/2 z-30 -translate-x-1/2">
+        <button
+          aria-label="Scroll down"
+          className="flex h-[58px] w-[58px] items-center justify-center rounded-full border border-white/80 bg-white/20 backdrop-blur-xl"
+          style={{
+            animation: "arrowPulse 1.8s ease-in-out infinite",
+          }}
+        >
+          <ChevronDown
+            className="h-7 w-7 text-white"
+            strokeWidth={1.8}
+            style={{
+              animation: "arrowFloat 1.5s ease-in-out infinite",
+            }}
+          />
+        </button>
       </div>
     </section>
   );
