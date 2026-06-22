@@ -17,7 +17,7 @@ export default function Header() {
 <Container>
         <div className="flex h-24 items-center justify-between">
           {/* Logo */}
-          <a href="/" className="shrink-0">
+          <a href="#" className="shrink-0">
             <img
               src="/images/logo.png"
               alt="GenBright"

@@ -5,7 +5,12 @@ import type { ReactNode } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import { Brain, Footprints, PlayCircle, ShieldCheck } from "lucide-react";
+import {
+  Brain,
+  Footprints,
+  PlayCircle,
+  ShieldCheck,
+} from "lucide-react";
 
 import familyImage from "/images/campus-front-view.png";
 
@@ -26,6 +31,30 @@ export default function FamiliesSection() {
   return (
     <section className="w-full bg-white py-10 md:py-14">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Section Heading */}
+        <div
+          data-aos="fade-up"
+          className="mb-10 text-center"
+        >
+          <p
+            className="text-sm font-semibold uppercase tracking-[0.3em] text-[#29A7D1]"
+            style={{ fontFamily: "Inter, sans-serif" }}
+          >
+            WHY CHOOSE US
+          </p>
+
+          <div className="mx-auto mt-3 h-[2px] w-16 bg-[#29A7D1]" />
+
+          <h2
+            className="mt-4 text-[34px] leading-none text-[#082B35] sm:text-[42px] md:text-[48px]"
+            style={{
+              fontFamily: "DM Serif Display, serif",
+              fontWeight: 400,
+            }}
+          >
+          </h2>
+        </div>
+
         <div className="grid overflow-hidden rounded-[28px] bg-white lg:grid-cols-[50%_50%]">
           {/* Content */}
           <div
@@ -36,8 +65,11 @@ export default function FamiliesSection() {
               <h2
                 data-aos="fade-up"
                 data-aos-delay="100"
-                className="mb-8 text-3xl font-bold leading-tight text-dark-navy sm:text-4xl lg:text-5xl"
-                style={{ fontFamily: "DM Serif Display, serif", fontWeight: 400 }}
+                className="mb-8 text-3xl leading-tight text-dark-navy sm:text-4xl lg:text-5xl"
+                style={{
+                  fontFamily: "DM Serif Display, serif",
+                  fontWeight: 400,
+                }}
               >
                 Why families
                 <br />
@@ -132,12 +164,16 @@ type FamilyItemProps = {
 
 function FamilyItem({ icon, text, delay }: FamilyItemProps) {
   return (
-    <div data-aos="fade-up" data-aos-delay={delay} className="text-center">
+    <div
+      data-aos="fade-up"
+      data-aos-delay={delay}
+      className="text-center"
+    >
       <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full border border-deep-teal/35 text-deep-teal transition duration-300 hover:-translate-y-1 hover:bg-deep-teal hover:text-white">
         <div className="h-7 w-7">{icon}</div>
       </div>
 
-      <p 
+      <p
         className="text-xs font-semibold leading-5 text-dark-navy/80 sm:text-sm"
         style={{ fontFamily: "Inter, sans-serif" }}
       >

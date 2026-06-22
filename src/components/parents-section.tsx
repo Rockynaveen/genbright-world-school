@@ -74,7 +74,7 @@ export default function ParentQuestionsSection() {
   }, []);
 
   return (
-    <section className="overflow-hidden bg-white py-14 md:py-20">
+    <section className="overflow-hidden bg-white py-10 md:py-14">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div data-aos="fade-up" className="text-center">
           <p
@@ -112,18 +112,18 @@ export default function ParentQuestionsSection() {
           </div>
         </div>
 
-        <div className="relative mx-auto mt-8 h-[520px] max-w-[360px] sm:h-[620px] sm:max-w-[700px] md:h-[650px] md:max-w-[850px] lg:h-[720px] lg:max-w-[1000px]">
+        <div className="relative mx-auto mt-8 h-[420px] max-w-[360px] sm:h-[620px] sm:max-w-[700px] md:h-[650px] md:max-w-[850px] lg:h-[720px] lg:max-w-[1000px]">
           <div
             data-aos="zoom-in"
-            className="absolute left-1/2 top-[47%] z-0 h-[310px] w-[310px] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-dotted sm:h-[450px] sm:w-[450px] md:h-[520px] md:w-[520px] lg:h-[600px] lg:w-[600px]"
+            className="absolute left-1/2 top-[47%] z-0 h-[290px] w-[290px] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-dotted sm:h-[450px] sm:w-[450px] md:h-[520px] md:w-[520px] lg:h-[600px] lg:w-[600px]"
             style={{ borderColor: `${colors.deepTeal}70` }}
           />
 
           <div
             data-aos="fade-up"
-            className="absolute left-1/2 top-[47%] z-20 h-[300px] w-[240px] -translate-x-1/2 -translate-y-1/2 sm:h-[400px] sm:w-[320px] md:h-[430px] md:w-[350px] lg:h-[470px] lg:w-[380px]"
+            className="absolute left-1/2 top-[47%] z-20 h-[180px] w-[140px] -translate-x-1/2 -translate-y-1/2 sm:h-[320px] sm:w-[260px] md:h-[430px] md:w-[350px] lg:h-[470px] lg:w-[380px]"
           >
-            <div className="absolute left-1/2 top-1/2 h-[220px] w-[220px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#29A7D1]/20 blur-[100px] sm:h-[300px] sm:w-[300px]" />
+            <div className="absolute left-1/2 top-1/2 h-[120px] w-[120px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#29A7D1]/20 blur-[60px] sm:h-[240px] sm:w-[240px] md:h-[300px] md:w-[300px]" />
 
             <img
               src="/images/women-thinking-removebg-preview.png"
@@ -137,12 +137,12 @@ export default function ParentQuestionsSection() {
               }}
             />
 
-            <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-20 h-[90px] bg-gradient-to-t from-white via-white/60 to-transparent sm:h-[110px]" />
+            <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-20 h-[60px] bg-gradient-to-t from-white via-white/60 to-transparent sm:h-[90px] md:h-[110px]" />
           </div>
 
           <div
             data-aos="fade-up"
-            className="absolute left-2 top-[50px] z-30 sm:left-[90px] sm:top-[90px] md:left-[150px] lg:left-[185px] lg:top-[100px]"
+            className="absolute left-2 top-[45px] z-30 sm:left-[90px] sm:top-[90px] md:left-[150px] lg:left-[185px] lg:top-[100px]"
           >
             <QuestionCard
               icon={<Smile size={16} />}
@@ -160,7 +160,7 @@ export default function ParentQuestionsSection() {
           <div
             data-aos="fade-up"
             data-aos-delay="100"
-            className="absolute right-2 top-[50px] z-30 sm:right-[90px] sm:top-[90px] md:right-[150px] lg:right-[185px] lg:top-[100px]"
+            className="absolute right-2 top-[45px] z-30 sm:right-[90px] sm:top-[90px] md:right-[150px] lg:right-[185px] lg:top-[100px]"
           >
             <QuestionCard
               icon={<Star size={16} />}
@@ -179,7 +179,7 @@ export default function ParentQuestionsSection() {
           <div
             data-aos="fade-up"
             data-aos-delay="200"
-            className="absolute left-0 top-[235px] z-30 sm:left-[30px] sm:top-[300px] md:left-[70px] lg:top-[310px]"
+            className="absolute left-0 top-[200px] z-30 sm:left-[30px] sm:top-[300px] md:left-[70px] lg:top-[310px]"
           >
             <QuestionCard
               icon={<Heart size={16} />}
@@ -197,7 +197,7 @@ export default function ParentQuestionsSection() {
           <div
             data-aos="fade-up"
             data-aos-delay="300"
-            className="absolute right-0 top-[235px] z-30 sm:right-[30px] sm:top-[300px] md:right-[70px] lg:top-[310px]"
+            className="absolute right-0 top-[200px] z-30 sm:right-[30px] sm:top-[300px] md:right-[70px] lg:top-[310px]"
           >
             <QuestionCard
               icon={<BookOpen size={16} />}
@@ -217,7 +217,7 @@ export default function ParentQuestionsSection() {
           <div
             data-aos="fade-up"
             data-aos-delay="400"
-            className="absolute bottom-[35px] left-1/2 z-30 -translate-x-1/2 sm:bottom-[70px] lg:bottom-[85px]"
+            className="absolute bottom-[20px] left-1/2 z-30 -translate-x-1/2 sm:bottom-[70px] lg:bottom-[85px]"
           >
             <QuestionCard
               icon={<Globe2 size={16} />}
@@ -239,7 +239,7 @@ export default function ParentQuestionsSection() {
 
         <div
           data-aos="fade-up"
-          className="mt-[-20px] flex items-center justify-center gap-3 sm:mt-[-35px] lg:mt-[-45px]"
+          className="mt-[-5px] flex items-center justify-center gap-3 sm:mt-[-35px] lg:mt-[-45px]"
         >
           <Sprout size={20} style={{ color: colors.goldenYellow }} />
 

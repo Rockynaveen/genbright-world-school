@@ -72,9 +72,10 @@ export default function BanayaraSection() {
     <section className="relative z-10 overflow-hidden bg-white py-10 md:py-14">
       <div className="w-full overflow-hidden bg-white">
         <div className="grid items-stretch bg-white lg:grid-cols-[42%_58%]">
-          <div className="relative z-20 flex flex-col justify-center bg-white px-6 py-8 sm:px-10 md:px-14 lg:px-20 lg:py-12 xl:px-24">
+          {/* Content - below image on mobile, left on desktop */}
+          <div className="order-2 relative z-20 flex flex-col justify-center bg-white px-6 py-8 sm:px-10 md:px-14 lg:order-1 lg:px-20 lg:py-12 xl:px-24">
             <div data-aos="fade-up" data-aos-delay="100">
-              <p 
+              <p
                 className="mb-1 flex items-center gap-2 text-[18px] font-bold text-deep-teal sm:text-[22px]"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
@@ -83,9 +84,12 @@ export default function BanayaraSection() {
                 <Leaf size={18} className="text-fresh-green" />
               </p>
 
-              <h2 
+              <h2
                 className="text-[54px] leading-[0.9] tracking-[-0.03em] text-dark-navy sm:text-[72px] md:text-[84px] lg:text-[78px] xl:text-[88px]"
-                style={{ fontFamily: "DM Serif Display, serif", fontWeight: 400 }}
+                style={{
+                  fontFamily: "DM Serif Display, serif",
+                  fontWeight: 400,
+                }}
               >
                 Banayara
               </h2>
@@ -116,17 +120,22 @@ export default function BanayaraSection() {
                     className="group flex gap-4"
                   >
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-fresh-green/20 transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-110 group-hover:bg-fresh-green/30">
-                      <Icon size={21} strokeWidth={1.7} className="text-deep-teal" />
+                      <Icon
+                        size={21}
+                        strokeWidth={1.7}
+                        className="text-deep-teal"
+                      />
                     </div>
 
                     <div>
-                      <h3 
+                      <h3
                         className="text-[15px] font-bold text-deep-teal"
                         style={{ fontFamily: "Inter, sans-serif" }}
                       >
                         {item.title}
                       </h3>
-                      <p 
+
+                      <p
                         className="mt-1 text-[13px] leading-5 text-dark-navy/75"
                         style={{ fontFamily: "Inter, sans-serif" }}
                       >
@@ -149,10 +158,11 @@ export default function BanayaraSection() {
             </p>
           </div>
 
+          {/* Image - first on mobile, right on desktop */}
           <div
             data-aos="fade-up"
             data-aos-delay="240"
-            className="relative min-h-[340px] overflow-hidden bg-white sm:min-h-[460px] md:min-h-[540px] lg:min-h-[640px]"
+            className="order-1 relative min-h-[340px] overflow-hidden bg-white sm:min-h-[460px] md:min-h-[540px] lg:order-2 lg:min-h-[640px]"
           >
             <img
               src="/images/meetbanayara.png"
@@ -179,17 +189,22 @@ export default function BanayaraSection() {
                   className="group flex gap-4 lg:border-r lg:border-deep-teal/10 lg:px-7 last:lg:border-r-0"
                 >
                   <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-fresh-green/20 transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-110 group-hover:bg-fresh-green/30">
-                    <Icon size={24} strokeWidth={1.7} className="text-deep-teal" />
+                    <Icon
+                      size={24}
+                      strokeWidth={1.7}
+                      className="text-deep-teal"
+                    />
                   </div>
 
                   <div>
-                    <h4 
+                    <h4
                       className="text-[14px] font-bold text-deep-teal"
                       style={{ fontFamily: "Inter, sans-serif" }}
                     >
                       {item.title}
                     </h4>
-                    <p 
+
+                    <p
                       className="mt-1 text-[13px] leading-5 text-dark-navy/75"
                       style={{ fontFamily: "Inter, sans-serif" }}
                     >

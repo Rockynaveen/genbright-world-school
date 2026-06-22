@@ -26,11 +26,11 @@ const items = [
 export default function ChildrenFirstSection() {
   useEffect(() => {
     AOS.init({
-      duration: 1400,
+      duration: 1200,
       easing: "ease-out-cubic",
       once: false,
       mirror: true,
-      offset: 100,
+      offset: 90,
       anchorPlacement: "top-bottom",
     });
 
@@ -38,29 +38,34 @@ export default function ChildrenFirstSection() {
   }, []);
 
   return (
-    <section className="w-full bg-white py-10 md:py-14">
+    <section className="w-full bg-white py-8 md:py-14">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-10 lg:grid-cols-[34%_66%] lg:gap-0">
+        <div className="grid gap-7 lg:grid-cols-[34%_66%] lg:gap-0">
           {/* Left Content */}
-          <div className="flex flex-col items-start justify-center border-b border-deep-teal/15 pb-10 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-12">
+          <div className="flex flex-col items-center justify-center border-b border-deep-teal/15 pb-7 text-center lg:items-start lg:border-b-0 lg:border-r lg:pb-0 lg:pr-12 lg:text-left">
             <h2
               data-aos="fade-up"
               data-aos-delay="100"
-              className="max-w-[340px] font-heading text-[36px] leading-[1.05] text-dark-navy sm:text-[44px] lg:text-[48px]"
+              className="max-w-[520px] text-[32px] leading-[1.08] text-dark-navy sm:text-[40px] md:text-[44px] lg:max-w-[340px] lg:text-[48px]"
+              style={{
+                fontFamily: "DM Serif Display, serif",
+                fontWeight: 400,
+              }}
             >
               We don’t start
-              <br />
+              <br className="hidden lg:block" />
               with subjects.
               <br />
               We start with
-              <br />
+              <br className="hidden lg:block" />
               children.
             </h2>
 
             <button
               data-aos="fade-up"
-              data-aos-delay="300"
-              className="mt-7 inline-flex items-center gap-2 rounded-full bg-deep-teal px-6 py-3 font-sans text-[13px] font-semibold text-white transition-all duration-300 hover:bg-dark-navy"
+              data-aos-delay="250"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-deep-teal px-6 py-3 text-[13px] font-semibold text-white transition-all duration-300 hover:bg-dark-navy"
+              style={{ fontFamily: "Inter, sans-serif" }}
             >
               Our Learning Approach
               <ArrowRight className="h-4 w-4" />
@@ -68,7 +73,7 @@ export default function ChildrenFirstSection() {
           </div>
 
           {/* Right Cards */}
-          <div className="grid gap-8 sm:grid-cols-3 lg:gap-0">
+          <div className="grid gap-0 divide-y divide-deep-teal/15 sm:grid-cols-3 sm:divide-x sm:divide-y-0 lg:gap-0">
             {items.map((item, index) => {
               const Icon = item.icon;
 
@@ -76,21 +81,32 @@ export default function ChildrenFirstSection() {
                 <div
                   key={item.title}
                   data-aos="fade-up"
-                  data-aos-duration="1400"
-                  data-aos-delay={index * 800}
-                  className="flex min-h-[230px] flex-col justify-center border-deep-teal/15 px-4 text-center sm:border-r sm:last:border-r-0 lg:px-10"
+                  data-aos-duration="1200"
+                  data-aos-delay={index * 450}
+                  className="flex min-h-[145px] items-center gap-4 px-2 py-5 text-left sm:min-h-[230px] sm:flex-col sm:justify-center sm:px-4 sm:py-0 sm:text-center lg:px-10"
                 >
-                  <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center text-fresh-green">
-                    <Icon strokeWidth={1.5} className="h-12 w-12" />
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-fresh-green/15 text-fresh-green sm:mx-auto sm:mb-5 sm:h-16 sm:w-16 sm:bg-transparent">
+                    <Icon strokeWidth={1.5} className="h-9 w-9 sm:h-12 sm:w-12" />
                   </div>
 
-                  <h3 className="font-heading text-[20px] leading-tight text-deep-teal">
-                    {item.title}
-                  </h3>
+                  <div>
+                    <h3
+                      className="text-[18px] leading-tight text-deep-teal sm:text-[20px]"
+                      style={{
+                        fontFamily: "DM Serif Display, serif",
+                        fontWeight: 400,
+                      }}
+                    >
+                      {item.title}
+                    </h3>
 
-                  <p className="mx-auto mt-4 max-w-[210px] font-sans text-[14px] leading-[1.7] text-dark-navy/75">
-                    {item.text}
-                  </p>
+                    <p
+                      className="mt-2 max-w-[260px] text-[13px] leading-[1.55] text-dark-navy/75 sm:mx-auto sm:mt-4 sm:max-w-[210px] sm:text-[14px] sm:leading-[1.7]"
+                      style={{ fontFamily: "Inter, sans-serif" }}
+                    >
+                      {item.text}
+                    </p>
+                  </div>
                 </div>
               );
             })}
