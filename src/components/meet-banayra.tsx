@@ -69,11 +69,11 @@ export default function BanayaraSection() {
   }, []);
 
   return (
-    <section className="relative z-10 overflow-hidden bg-[#F7F4EC] py-14 md:py-20 font-['Inter']">
-      <div className="w-full overflow-hidden bg-[#FFFDF8]">
+    <section className="relative z-10 overflow-hidden bg-white py-14 md:py-20 font-['Inter']">
+      <div className="w-full overflow-hidden bg-white">
         <div className="grid items-stretch lg:grid-cols-[42%_58%]">
           {/* Left Content */}
-          <div className="relative z-20 flex flex-col justify-center bg-[#FFFDF8] px-6 py-10 sm:px-10 md:px-14 lg:px-20 lg:py-16 xl:px-24">
+          <div className="relative z-20 flex flex-col justify-center bg-white px-6 py-10 sm:px-10 md:px-14 lg:px-20 lg:py-16 xl:px-24">
             <div data-aos="fade-up" data-aos-delay="100">
               <p className="mb-1 flex items-center gap-2 text-[18px] font-bold text-deep-teal sm:text-[22px]">
                 <Leaf size={18} className="text-fresh-green" />
@@ -144,7 +144,7 @@ export default function BanayaraSection() {
           <div
             data-aos="fade-up"
             data-aos-delay="240"
-            className="relative min-h-[360px] overflow-hidden bg-[#FFFDF8] sm:min-h-[500px] md:min-h-[580px] lg:min-h-[720px]"
+            className="relative min-h-[360px] overflow-hidden bg-white sm:min-h-[500px] md:min-h-[580px] lg:min-h-[720px]"
           >
             <img
               src="/images/meetbanayara.png"

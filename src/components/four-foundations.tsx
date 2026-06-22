@@ -20,7 +20,7 @@ const foundations = [
   {
     title: "FEEL",
     quote: "I understand how you feel.",
-    subtitle: "The beginning of every meaningful relationship.",
+    subtitle: "The beginning of   meaningful relationship.",
     bg: "bg-orange",
     icon: Heart,
     image: foundationImg2,

@@ -12,7 +12,7 @@ import familyImage from "/images/campus-front-view.png";
 
 export default function FamiliesSection() {
   return (
-    <section className="w-full bg-[#F5F5F5] py-14 md:py-20">
+    <section className="w-full bg-white py-14 md:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid overflow-hidden rounded-[28px] bg-[#FAF8F1] lg:grid-cols-[50%_50%]">
           {/* Content */}

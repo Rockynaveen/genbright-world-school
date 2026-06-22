@@ -74,7 +74,7 @@ export default function ParentQuestionsSection() {
   }, []);
 
   return (
-    <section className="overflow-hidden bg-[#FFFDF8] py-[50px]">
+    <section className="overflow-hidden bg-white py-14 md:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div data-aos="fade-up" className="text-center">
           <p
@@ -137,7 +137,7 @@ export default function ParentQuestionsSection() {
               }}
             />
 
-            <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-20 h-[90px] bg-gradient-to-t from-[#FFFDF8] via-[#FFFDF8]/60 to-transparent sm:h-[110px]" />
+            <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-20 h-[90px] bg-gradient-to-t from-white via-white/60 to-transparent sm:h-[110px]" />
           </div>
 
           <div

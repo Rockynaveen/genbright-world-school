@@ -45,7 +45,7 @@ export default function LeaveSchoolSection() {
         </div>
 
         {/* Content */}
-        <div className="flex flex-col justify-center bg-white px-5 py-14 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+        <div className="flex flex-col justify-center bg-white px-5 py-14 md:py-20 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           <h2
             data-aos="fade-up"
             data-aos-delay="200"
