@@ -1,175 +1,175 @@
 "use client";
 
-import { useEffect } from "react";
-import type { ReactNode } from "react";
+import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import {
-  Brain,
-  Footprints,
-  PlayCircle,
-  ShieldCheck,
-} from "lucide-react";
+const cards = [
+  {
+    title: "Is known.",
+    color: "text-[#5F8F72]",
+    bg: "bg-[#EEF6EF]",
+    delay: "100",
+    icon: "user",
+  },
+  {
+    title: "Is heard.",
+    color: "text-[#2F8FC8]",
+    bg: "bg-[#EEF7FF]",
+    delay: "200",
+    icon: "chat",
+  },
+  {
+    title: "Is encouraged.",
+    color: "text-[#D99A00]",
+    bg: "bg-[#FFF6DC]",
+    delay: "300",
+    icon: "arrow",
+  },
+  {
+    title: "Belongs.",
+    color: "text-[#E85B88]",
+    bg: "bg-[#FFF0F6]",
+    delay: "400",
+    icon: "people",
+  },
+];
 
-import familyImage from "/images/campus-front-view.png";
+function CardIcon({ type }: { type: string }) {
+  if (type === "chat") {
+    return (
+      <svg
+        viewBox="0 0 24 24"
+        className="h-[30px] w-[30px]"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+      >
+        <path d="M5 6h14a3 3 0 0 1 3 3v3a3 3 0 0 1-3 3H10l-5 4v-4a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3z" />
+        <circle cx="9" cy="11" r="1" />
+        <circle cx="12" cy="11" r="1" />
+        <circle cx="15" cy="11" r="1" />
+      </svg>
+    );
+  }
 
-export default function FamiliesSection() {
+  if (type === "arrow") {
+    return (
+      <svg
+        viewBox="0 0 24 24"
+        className="h-[30px] w-[30px]"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+      >
+        <path d="M12 19V5" />
+        <path d="M6 11l6-6 6 6" />
+      </svg>
+    );
+  }
+
+  if (type === "people") {
+    return (
+      <svg
+        viewBox="0 0 24 24"
+        className="h-[30px] w-[30px]"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+      >
+        <circle cx="8" cy="8" r="3" />
+        <circle cx="16" cy="8" r="3" />
+        <path d="M3 20c.8-4 3.5-6 5-6s4.2 2 5 6" />
+        <path d="M11 20c.8-4 3.5-6 5-6s4.2 2 5 6" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="h-[30px] w-[30px]"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+    >
+      <circle cx="12" cy="8" r="4" />
+      <path d="M4 20c1.5-4 5-6 8-6s6.5 2 8 6" />
+    </svg>
+  );
+}
+
+export default function WhyChoose() {
   useEffect(() => {
     AOS.init({
       duration: 1200,
+      offset: 80,
       easing: "ease-out-cubic",
       once: false,
       mirror: true,
-      offset: 90,
-      anchorPlacement: "top-bottom",
     });
 
     AOS.refreshHard();
   }, []);
 
   return (
-    <section className="w-full bg-white py-10 md:py-14">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Section Heading */}
-        <div
-          data-aos="fade-up"
-          className="mb-10 text-center"
-        >
+    <section className="w-full overflow-hidden bg-white px-4 py-12 md:px-8 lg:py-14">
+      <div className="mx-auto max-w-7xl">
+        {/* Heading */}
+        <div className="mb-6 text-center" data-aos="fade-up">
+          <p className="mb-2 text-[10px] font-bold uppercase tracking-[2.8px] text-[#1c1c1c]/80">
+            Why families choose GenBright
+          </p>
+
           <h2
-            className="mt-4 text-[34px] leading-none text-[#082B35] sm:text-[42px] md:text-[48px]"
-            style={{
-              fontFamily: "DM Serif Display, serif",
-              fontWeight: 400,
-            }}
+            className="text-[28px] leading-none text-[#1c1c1c] md:text-[36px] lg:text-[42px]"
+            style={{ fontFamily: "DM Serif Display" }}
           >
+            Because here, their child...
           </h2>
         </div>
 
-        <div className="grid overflow-hidden rounded-[28px] bg-white lg:grid-cols-[50%_50%]">
-          {/* Content */}
-          <div
-            data-aos="fade-up"
-            className="flex min-h-[420px] items-center px-6 py-10 sm:px-10 lg:min-h-[520px] lg:px-14"
-          >
-            <div className="max-w-xl">
-              <h2
-                data-aos="fade-up"
-                data-aos-delay="100"
-                className="mb-8 text-3xl leading-tight text-dark-navy sm:text-4xl lg:text-5xl"
-                style={{
-                  fontFamily: "DM Serif Display, serif",
-                  fontWeight: 400,
-                }}
+        {/* Cards */}
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_1fr_1.65fr] lg:gap-5">
+          {cards.map((item) => (
+            <div
+              key={item.title}
+              data-aos="fade-up"
+              data-aos-delay={item.delay}
+              className="flex h-[155px] flex-col items-center justify-center gap-4 rounded-[14px] border border-[#ECECEC] bg-white transition-all duration-300 hover:-translate-y-1"
+            >
+              <div
+                className={`flex h-[56px] w-[56px] items-center justify-center rounded-full ${item.bg} ${item.color}`}
               >
-                Why families
-                <br />
-                choose GenBright.
-              </h2>
-
-              <div className="mb-8 grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-4">
-                <FamilyItem
-                  delay={200}
-                  icon={<Brain />}
-                  text={
-                    <>
-                      Their child
-                      <br />
-                      is known.
-                    </>
-                  }
-                />
-
-                <FamilyItem
-                  delay={320}
-                  icon={<PlayCircle />}
-                  text={
-                    <>
-                      Their child
-                      <br />
-                      is heard.
-                    </>
-                  }
-                />
-
-                <FamilyItem
-                  delay={440}
-                  icon={<Footprints />}
-                  text={
-                    <>
-                      Their child
-                      <br />
-                      is encouraged.
-                    </>
-                  }
-                />
-
-                <FamilyItem
-                  delay={560}
-                  icon={<ShieldCheck />}
-                  text={
-                    <>
-                      Their child
-                      <br />
-                      belongs.
-                    </>
-                  }
-                />
+                <CardIcon type={item.icon} />
               </div>
 
-              <p
-                data-aos="fade-up"
-                data-aos-delay="700"
-                className="text-sm font-semibold leading-7 text-dark-navy sm:text-base"
-                style={{ fontFamily: "Inter, sans-serif" }}
-              >
-                And because learning feels joyful again — every day, in every
-                space, with every child.
-              </p>
+              <h4 className="text-[17px] font-semibold text-[#111111]">
+                {item.title}
+              </h4>
             </div>
-          </div>
+          ))}
 
-          {/* Image */}
+          {/* CTA Card */}
           <div
             data-aos="fade-up"
-            data-aos-delay="250"
-            className="relative min-h-[320px] overflow-hidden lg:min-h-[520px]"
+            data-aos-delay="500"
+            className="flex h-[155px] items-center justify-between rounded-[14px] bg-[#7EAD9D] px-7 sm:col-span-2 lg:col-span-1"
           >
-            <img
-              src={familyImage}
-              alt="Families"
-              className="h-full w-full object-cover"
-            />
+            <p className="text-[20px] font-medium leading-[1.15] text-white">
+              And because
+              <br />
+              learning feels
+              <br />
+              joyful again.
+            </p>
+
+            <button className="flex h-[40px] w-[40px] items-center justify-center rounded-full bg-white text-[22px] text-[#5F9382] transition-all duration-300 hover:translate-x-1">
+              →
+            </button>
           </div>
         </div>
       </div>
     </section>
-  );
-}
-
-type FamilyItemProps = {
-  icon: ReactNode;
-  text: ReactNode;
-  delay: number;
-};
-
-function FamilyItem({ icon, text, delay }: FamilyItemProps) {
-  return (
-    <div
-      data-aos="fade-up"
-      data-aos-delay={delay}
-      className="text-center"
-    >
-      <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full border border-deep-teal/35 text-deep-teal transition duration-300 hover:-translate-y-1 hover:bg-deep-teal hover:text-white">
-        <div className="h-7 w-7">{icon}</div>
-      </div>
-
-      <p
-        className="text-xs font-semibold leading-5 text-dark-navy/80 sm:text-sm"
-        style={{ fontFamily: "Inter, sans-serif" }}
-      >
-        {text}
-      </p>
-    </div>
   );
 }

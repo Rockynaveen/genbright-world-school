@@ -22,7 +22,7 @@ const socialIcons = [
 export default function Footer() {
   return (
     <footer className="bg-dark-navy font-sans text-white">
-      <div className="mx-auto max-w-7xl px-6 py-12 lg:px-10">
+      <div className="mx-auto max-w-7xl px-6 py-4 lg:px-10">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1.2fr]">
           {/* Brand */}
           <div>
@@ -118,7 +118,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-8 border-t border-white/10 py-2">
+        <div className="mt-8 border-t border-white/10 pt-3">
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
             <p className="text-xs text-white/60">
               © 2026 GenBright World School. All rights reserved.

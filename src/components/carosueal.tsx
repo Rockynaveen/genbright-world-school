@@ -58,7 +58,7 @@ const FamilyCampusCarousel = () => {
   }, []);
 
   return (
-    <section className="w-full bg-white py-14 md:py-20">
+    <section className="w-full bg-white py-10 md:py-14">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-[28px] bg-white">
           <div

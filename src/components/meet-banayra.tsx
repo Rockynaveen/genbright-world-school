@@ -14,44 +14,16 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const growthPoints = [
-  {
-    title: "Roots first.",
-    text: "Strong beginnings create a strong foundation.",
-    icon: Sprout,
-  },
-  {
-    title: "Then branches.",
-    text: "Every experience helps them grow.",
-    icon: TreePine,
-  },
-  {
-    title: "Then possibilities.",
-    text: "Endless paths open up for their future.",
-    icon: Leaf,
-  },
+  { title: "Roots first.", text: "Strong beginnings create a strong foundation.", icon: Sprout },
+  { title: "Then branches.", text: "Every experience helps them grow.", icon: TreePine },
+  { title: "Then possibilities.", text: "Endless paths open up for their future.", icon: Leaf },
 ];
 
 const bottomValues = [
-  {
-    title: "Kind at heart",
-    text: "I care for myself, others and nature.",
-    icon: Heart,
-  },
-  {
-    title: "Curious always",
-    text: "I ask, explore and never stop wondering.",
-    icon: Search,
-  },
-  {
-    title: "Brave to try",
-    text: "I step out, take risks and keep learning.",
-    icon: Footprints,
-  },
-  {
-    title: "Mindful & calm",
-    text: "I pause, reflect and be present.",
-    icon: Sunrise,
-  },
+  { title: "Kind at heart", text: "I care for myself, others and nature.", icon: Heart },
+  { title: "Curious always", text: "I ask, explore and never stop wondering.", icon: Search },
+  { title: "Brave to try", text: "I step out, take risks and keep learning.", icon: Footprints },
+  { title: "Mindful & calm", text: "I pause, reflect and be present.", icon: Sunrise },
 ];
 
 export default function BanayaraSection() {
@@ -69,11 +41,11 @@ export default function BanayaraSection() {
   }, []);
 
   return (
-    <section className="relative z-10 overflow-hidden bg-white py-10 md:py-14">
-      <div className="w-full overflow-hidden bg-white">
-        <div className="grid items-stretch bg-white lg:grid-cols-[42%_58%]">
-          {/* Content - below image on mobile, left on desktop */}
-          <div className="order-2 relative z-20 flex flex-col justify-center bg-white px-6 py-8 sm:px-10 md:px-14 lg:order-1 lg:px-20 lg:py-12 xl:px-24">
+    <section className="relative z-10 overflow-hidden  py-10 md:py-14">
+      <div className="w-full overflow-hidden bg-[#F8F5F0]">
+        <div className="grid items-stretch bg-[#F8F5F0] lg:grid-cols-[42%_58%]">
+          {/* Content */}
+          <div className="order-2 relative z-20 flex flex-col justify-center bg-[#F8F5F0] px-6 py-8 sm:px-10 md:px-14 lg:order-1 lg:px-20 lg:py-12 xl:px-24">
             <div data-aos="fade-up" data-aos-delay="100">
               <p
                 className="mb-1 flex items-center gap-2 text-[18px] font-bold text-deep-teal sm:text-[22px]"
@@ -91,7 +63,6 @@ export default function BanayaraSection() {
               >
                 Banayara
               </h2>
-
             </div>
 
             <p
@@ -117,11 +88,7 @@ export default function BanayaraSection() {
                     className="group flex gap-4"
                   >
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-fresh-green/20 transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-110 group-hover:bg-fresh-green/30">
-                      <Icon
-                        size={21}
-                        strokeWidth={1.7}
-                        className="text-deep-teal"
-                      />
+                      <Icon size={21} strokeWidth={1.7} className="text-deep-teal" />
                     </div>
 
                     <div>
@@ -155,16 +122,27 @@ export default function BanayaraSection() {
             </p>
           </div>
 
-          {/* Image - first on mobile, right on desktop */}
+          {/* Image */}
           <div
             data-aos="fade-up"
             data-aos-delay="240"
-            className="order-1 relative min-h-[340px] overflow-hidden bg-white sm:min-h-[460px] md:min-h-[540px] lg:order-2 lg:min-h-[640px]"
+            className="order-1 relative min-h-[340px] overflow-hidden bg-[#F8F5F0] sm:min-h-[460px] md:min-h-[540px] lg:order-2 lg:min-h-[640px]"
           >
             <img
               src="/images/meetbanayara.png"
               alt="Banayara character"
-              className="absolute inset-0 h-full w-full object-cover object-center"
+              className="absolute inset-0 h-full w-full object-contain object-center"
+              style={{
+                mixBlendMode: "multiply",
+              }}
+            />
+
+            <div
+              className="pointer-events-none absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(to right, #F8F5F0 0%, rgba(248,245,240,0.72) 8%, transparent 22%)",
+              }}
             />
           </div>
         </div>
@@ -186,11 +164,7 @@ export default function BanayaraSection() {
                   className="group flex gap-4 lg:border-r lg:border-deep-teal/10 lg:px-7 last:lg:border-r-0"
                 >
                   <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-fresh-green/20 transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-110 group-hover:bg-fresh-green/30">
-                    <Icon
-                      size={24}
-                      strokeWidth={1.7}
-                      className="text-deep-teal"
-                    />
+                    <Icon size={24} strokeWidth={1.7} className="text-deep-teal" />
                   </div>
 
                   <div>

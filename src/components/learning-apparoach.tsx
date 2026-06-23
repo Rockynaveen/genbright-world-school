@@ -38,7 +38,7 @@ export default function ChildrenFirstSection() {
   }, []);
 
   return (
-    <section className="w-full bg-white py-8 md:py-14">
+    <section className="w-full bg-white ">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-7 lg:grid-cols-[34%_66%] lg:gap-0">
           {/* Left Content */}

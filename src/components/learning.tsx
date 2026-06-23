@@ -38,7 +38,7 @@ export default function LearningWallsSection() {
   }, []);
 
   return (
-    <section className="bg-white pt-6 pb-10 md:pt-14 md:pb-14">
+    <section className="bg-white py-10 md:py-14">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <Carousel opts={{ align: "start", loop: true }} className="relative w-full">
           <div className="mb-5 flex items-end justify-between gap-4">
